@@ -1,5 +1,109 @@
 .signIn-page-wrapper {
+  display: flex;
+  justify-content: space-between;
   max-width: 100%;
-  height: 100vh;
-  background-color: aqua;
+}
+.signInpage-img-wrapper {
+  min-width: 50%;
+  font-size: large;
+}
+.sign-in-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  text-align: center;
+  padding-top: 2rem;
+  padding: 2rem;
+}
+.sign-in-page {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(165, 155, 155);
+  width: 40%;
+  gap: 1rem;
+  padding: 2rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+}
+.sign-up-link-wrapper {
+  text-align: center;
+  max-width: 40%;
+  display: flex;
+  border: 1px solid rgb(165, 155, 155);
+  max-height: 2%;
+  gap: 0.4rem;
+  padding: 2rem;
+  border-radius: 8px;
+  overflow-inline: scroll;
+}
+.sign-in-page-img {
+  font-size: large;
+}
+.insta-heading-landing-page {
+  font-size: 2.6rem;
+  font-family: serif;
+}
+.sign-in-email-input {
+  padding: 0.4rem 1rem;
+  font-size: 16px;
+}
+.sign-in-password-input {
+  padding: 0.4rem 1rem;
+  font-size: 16px;
+}
+.log-in-btn {
+  background-color: rgb(81, 140, 173);
+  font-size: 16px;
+  color: white;
+  border: hidden;
+  padding: 0.4rem 1rem;
+  border-radius: 9px;
+}
+.facebook-link {
+  font-size: 16px;
+  color: black;
+  border: 1px solid rgb(165, 155, 155);
+  padding: 0.4rem 0.3rem;
+  border-radius: 9px;
+  text-decoration: none;
+  text-align: center;
+  margin: 0;
+}
+.forget-link,
+.sign-up-link {
+  text-decoration: none;
+  color: black;
+}
+.sign-up-link {
+  text-decoration: none;
+  color: blue;
+}
+@media (max-width: 850px) {
+  .signInpage-img-wrapper {
+    display: none;
+  }
+  .sign-in-page-wrapper {
+    min-width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .sign-up-link-wrapper {
+    width: 100%;
+    align-items: center;
+    border: hidden;
+    justify-content: center;
+  }
+}
+@media (max-width: 600px) {
+  .sign-in-page {
+    width: 60%;
+    text-align: center;
+    border: hidden;
+  }
+  .sign-up-link-wrapper {
+    min-width: 90%;
+    align-items: center;
+    justify-content: center;
+  }
 }
