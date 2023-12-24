@@ -1,19 +1,9 @@
-.photoAvatar-main-wrapper {
-  border-radius: 50%;
-  color: yellow;
-  margin: 0;
-  width: 35px;
-  height: 35px;
-}
 .photo-avatar-img {
   border-radius: 50%;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
 }
 .sidebar-icon-profile {
   display: flex;
   gap: 5px;
-}
-.profile-icon {
-  padding-right: 8px;
 }

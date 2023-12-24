@@ -1,0 +1,26 @@
+.contents-main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 53%;
+  border: 1px solid var(--secondary);
+}
+.contents-wrapper {
+  display: flex;
+  padding: 1rem;
+  justify-content: flex-start;
+  width: 90%;
+  gap: 1rem;
+}
+.content-page-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.content-avatar-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 60px;
+  height: 60px;
+}
