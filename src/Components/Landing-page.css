@@ -1,7 +1,16 @@
 .landing-page-container {
   display: flex;
-  flex-direction: column;
   width: 100%;
   height: 100vh;
   background-color: blue;
+}
+.landing-page-left-sidebar-wrapper {
+  display: flex;
+  min-width: 18%;
+  background-color: var(--tertiary);
+  justify-content: flex-start;
+}
+.sidebar-text-img {
+  width: 70%;
+  height: 10%;
 }

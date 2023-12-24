@@ -5,9 +5,9 @@ import { SignUpPage } from "./Components/SignUp-page";
 function App() {
   return (
     <div className="App">
-      <SignInPage />
+      {/* <SignInPage /> */}
       {/* <SignUpPage /> */}
-      {/* <LandingPage /> */}
+      <LandingPage />
     </div>
   );
 }
