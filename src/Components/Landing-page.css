@@ -20,10 +20,22 @@
   flex-direction: column;
   width: 100%;
   justify-content: flex-start;
+  align-items: center;
+  text-align: center;
 }
 .r-sidebar-links {
   text-decoration: none;
   color: var(--tertiary);
   padding: 1rem 0;
-  font-size: large;
+  font-size: larger;
+  padding-left: 6px;
+}
+.sidebar-icon {
+  font-size: larger;
+  padding-right: 6px;
+}
+.r-sidebar-links:hover {
+  background-color: var(--secondary);
+  border-radius: 6px;
+  padding-left: 6px;
 }
