@@ -3,9 +3,7 @@
   flex-direction: column;
   width: 100%;
   justify-content: center;
-  text-align: center;
   align-items: center;
-  text-align: center;
 }
 .signUp-page {
   width: 26%;
@@ -51,4 +49,9 @@
   font-size: small;
   height: 90px;
   width: 180px;
+}
+@media (max-width: 800px) {
+  .signUp-page {
+    width: 50%;
+  }
 }
