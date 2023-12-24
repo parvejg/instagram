@@ -21,7 +21,7 @@
 .sign-in-page {
   display: flex;
   flex-direction: column;
-  border: 1px solid #dbdee0;
+  border: 1px solid var(--seconday);
   width: 50%;
   gap: 1rem;
   padding: 2rem;
@@ -31,7 +31,7 @@
   text-align: center;
   width: 50%;
   display: flex;
-  border: 1px solid #dbdee0;
+  border: 1px solid var(--seconday);
   max-height: 2%;
   gap: 0.4rem;
   padding: 2rem;
@@ -45,7 +45,7 @@
 }
 
 .log-in-btn {
-  background-color: rgb(90, 191, 231);
+  background-color: var(--primary);
   font-size: 16px;
   color: white;
   border: hidden;
@@ -64,7 +64,7 @@
 .forget-link,
 .sign-up-link {
   text-decoration: none;
-  color: black;
+  color: var(--tertiary);
   font-size: 14px;
 }
 .sign-up-link {
