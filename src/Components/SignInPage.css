@@ -43,18 +43,7 @@
 .insta-heading-landing-page {
   padding: 1rem 2rem;
 }
-.sign-in-email-input {
-  padding: 0.7rem 1rem;
-  font-size: 13px;
-  background-color: #f1f4f7;
-  border: 1px solid #dbdee0;
-}
-.sign-in-password-input {
-  padding: 0.6rem 1rem;
-  font-size: 13px;
-  background-color: #f1f4f7;
-  border: 1px solid #cdcecf;
-}
+
 .log-in-btn {
   background-color: rgb(90, 191, 231);
   font-size: 16px;

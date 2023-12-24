@@ -4,4 +4,43 @@
   width: 100%;
   justify-content: center;
   text-align: center;
+  align-items: center;
+  text-align: center;
+}
+.signUp-page {
+  width: 26%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dbdee0;
+  justify-content: center;
+  align-items: center;
+}
+.with-facebook-logIn-link {
+  background-color: rgb(41, 149, 236);
+  font-size: 16px;
+  color: white;
+  border: hidden;
+  cursor: pointer;
+  border-radius: 7px;
+  width: 70%;
+}
+.signUp-basic-input-container {
+  display: flex;
+  flex-direction: column;
+  width: 76%;
+  gap: 7px;
+}
+.signUp-btn-and-privacy-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 76%;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.sign-in-link-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 26%;
+  border: 1px solid #dbdee0;
 }
