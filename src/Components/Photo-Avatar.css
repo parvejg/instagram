@@ -7,3 +7,6 @@
   display: flex;
   gap: 5px;
 }
+.content-avatar-userName {
+  cursor: pointer;
+}
