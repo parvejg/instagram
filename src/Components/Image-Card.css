@@ -10,9 +10,10 @@
 }
 .imgCard-avatar-wrapper {
   display: flex;
-  padding: 2rem 3.7rem 1rem;
+  padding: 2rem 4.6rem 1rem;
   align-items: center;
   gap: 4px;
+  width: 81%;
 }
 .cardImg-post-time-text {
   color: grey;
