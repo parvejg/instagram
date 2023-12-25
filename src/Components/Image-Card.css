@@ -5,13 +5,11 @@
 }
 .imgCard-avatar {
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  min-width: 50px;
+  height: 50px;
 }
 .imgCard-avatar-wrapper {
-  width: 100%;
   display: flex;
-  justify-content: flex-start;
   padding: 2rem 3.7rem 1rem;
   align-items: center;
   gap: 4px;
@@ -19,4 +17,50 @@
 .cardImg-post-time-text {
   color: grey;
   list-style: decimal;
+}
+.image-card-main-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.cardImg-toggle-btn-wrapper {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+.imgCard-toggle-btn {
+  border: hidden;
+  background-color: white;
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+  padding-right: 18px;
+}
+.userName {
+  width: 100px;
+}
+.like-btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.cardImg-bottom-btns-wrapper {
+  display: flex;
+  width: 80%;
+  padding-left: 4.5rem;
+  padding-top: 1rem;
+  justify-content: start;
+  gap: 0.5rem;
+}
+.message-btn {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.share-btn {
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.current-likes {
+  text-align: left;
+  padding-left: 4.4rem;
+  padding-top: 4px;
 }

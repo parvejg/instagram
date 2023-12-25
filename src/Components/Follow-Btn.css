@@ -1,0 +1,7 @@
+.imgCard-follow-btn {
+  color: var(--primary);
+  border: hidden;
+  background-color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
