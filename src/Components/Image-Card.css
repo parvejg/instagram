@@ -1,0 +1,22 @@
+.content-card-img {
+  width: 80%;
+  height: 500px;
+  border-radius: 4px;
+}
+.imgCard-avatar {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.imgCard-avatar-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 2rem 3.7rem 1rem;
+  align-items: center;
+  gap: 4px;
+}
+.cardImg-post-time-text {
+  color: grey;
+  list-style: decimal;
+}
