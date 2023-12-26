@@ -1,0 +1,22 @@
+.medium {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.small {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.large {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+.sidebar-icon-profile {
+  display: flex;
+  gap: 5px;
+}
+.content-avatar-userName {
+  cursor: pointer;
+}
