@@ -13,12 +13,6 @@
   width: 90%;
   gap: 1rem;
 }
-.content-page-avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-}
 .content-avatar-wrapper {
   margin: 0;
   width: 60px;

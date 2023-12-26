@@ -1,9 +1,9 @@
 import "./Landing-page.css";
-import "./Photo-Avatar.css";
+import "./Avatar.css";
 import "./Left-sidebar.css";
 
 import { LeftSidebar } from "./Left-sidebar";
-import { PhotoAvatar } from "./Photo-Avatar";
+import { Avatar } from "./Avatar";
 import { Contents } from "./Contents";
 export const LandingPage = () => {
   return (
