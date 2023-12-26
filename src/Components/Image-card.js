@@ -2,7 +2,7 @@ import "./Image-Card.css";
 import { PhotoAvatar } from "./Photo-Avatar";
 import { FollowBtn } from "./Follow-Btn";
 import { FaRegHeart } from "react-icons/fa";
-import { TbMessageCircle, TbMessageCircle2 } from "react-icons/tb";
+import { TbMessageCircle } from "react-icons/tb";
 import { BsSend } from "react-icons/bs";
 export const ImageCard = () => {
   return (
