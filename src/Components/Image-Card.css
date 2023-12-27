@@ -44,6 +44,10 @@
   font-size: 1.5rem;
   cursor: pointer;
 }
+.save-btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 .cardImg-bottom-btns-wrapper {
   display: flex;
   width: 80%;
@@ -51,6 +55,17 @@
   padding-top: 1rem;
   justify-content: start;
   gap: 0.5rem;
+}
+.save-btn-wrapper {
+  display: flex;
+  justify-content: end;
+  width: 90%;
+}
+.save-btn:hover,
+.like-btn:hover,
+.message-btn:hover,
+.share-btn:hover {
+  color: grey;
 }
 .message-btn {
   font-size: 1.6rem;
@@ -64,4 +79,29 @@
   text-align: left;
   padding-left: 4.4rem;
   padding-top: 4px;
+}
+.card-img-discription {
+  text-align: left;
+  padding-left: 4.4rem;
+  padding-top: 4px;
+}
+.view-comments-btn {
+  text-align: left;
+  padding-left: 4.4rem;
+  padding-top: 4px;
+  background-color: white;
+  border: hidden;
+  color: gray;
+}
+.comment-input {
+  text-align: left;
+  padding-left: 4.4rem;
+  padding-top: 4px;
+  background-color: white;
+  border: hidden;
+  width: 20%;
+  height: 10%;
+}
+.comment-input:focus {
+  outline: none;
 }
