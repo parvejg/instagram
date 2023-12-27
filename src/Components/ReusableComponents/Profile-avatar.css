@@ -1,0 +1,23 @@
+.profile-avatar {
+  display: flex;
+  gap: 7px;
+}
+.avatar-name-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+}
+.avatar-btn-wrapper {
+  display: flex;
+  justify-content: end;
+  width: 300px;
+}
+
+.username {
+  font-weight: bold;
+}
+.name {
+  font-weight: bold;
+  color: gray;
+}

@@ -7,25 +7,33 @@
   padding: 2rem;
   height: 100vw;
 }
-.profile-avatar {
+.see-all-btn-wrapper {
   display: flex;
-  gap: 7px;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
-.avatar-name-wrapper {
+.see-all-btn {
+  text-align: left;
+  padding-left: 4.4rem;
+  padding-top: 4px;
+  background-color: white;
+  border: hidden;
+  color: black;
+}
+.see-all-btn:hover {
+  color: grey;
+}
+.suggested-for-you-text {
+  font-weight: 500;
+  font-size: 15px;
+  color: gray;
+}
+.right-sidebar-users-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-.avatar-btn-wrapper {
-  display: flex;
-  justify-content: end;
-  width: 150px;
-}
-
-.username {
-  font-weight: bold;
-}
-.name {
-  font-weight: bold;
-  color: gray;
+  padding: 0.4rem;
+  width: 300px;
+  gap: 1.3rem;
+  margin-top: 1rem;
 }

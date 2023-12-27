@@ -19,11 +19,14 @@
   text-align: center;
 }
 .l-sidebar-links {
+  display: flex;
+  justify-content: start;
   text-decoration: none;
   color: var(--tertiary);
   padding: 1rem 0;
   font-size: larger;
   padding-left: 6px;
+  text-align: center;
 }
 .sidebar-icon {
   font-size: larger;
