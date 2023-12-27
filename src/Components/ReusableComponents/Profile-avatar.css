@@ -1,6 +1,7 @@
 .profile-avatar {
   display: flex;
   gap: 7px;
+  width: 300px;
 }
 .avatar-name-wrapper {
   display: flex;
@@ -20,4 +21,5 @@
 .name {
   font-weight: bold;
   color: gray;
+  text-align: justify;
 }
