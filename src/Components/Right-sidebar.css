@@ -1,0 +1,10 @@
+.right-sidebar-main-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  justify-content: flex-start;
+  text-align: start;
+  padding: 2rem;
+  height: 100vw;
+  background-color: red;
+}
