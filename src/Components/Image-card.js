@@ -15,7 +15,7 @@ export const ImageCard = () => {
         />
         <small className="userName">Parvej ch</small>
         <small className="cardImg-post-time-text">4w</small>
-        <FollowBtn className="imgCard-follow-btn" />
+        <FollowBtn btnName="Follow" />
         <div className="cardImg-toggle-btn-wrapper">
           <button className="imgCard-toggle-btn">...</button>
         </div>

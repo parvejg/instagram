@@ -1,10 +1,31 @@
 .right-sidebar-main-wrapper {
   display: flex;
   flex-direction: column;
-  max-width: 200px;
+  width: 300px;
   justify-content: flex-start;
   text-align: start;
   padding: 2rem;
   height: 100vw;
-  background-color: red;
+}
+.profile-avatar {
+  display: flex;
+  gap: 7px;
+}
+.avatar-name-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.avatar-btn-wrapper {
+  display: flex;
+  justify-content: end;
+  width: 150px;
+}
+
+.username {
+  font-weight: bold;
+}
+.name {
+  font-weight: bold;
+  color: gray;
 }

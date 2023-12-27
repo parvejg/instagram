@@ -1,4 +1,4 @@
 import "./Follow-Btn.css";
-export const FollowBtn = ({ className }) => {
-  return <button className={className}>Follow</button>;
+export const FollowBtn = ({ btnName }) => {
+  return <button className="imgCard-follow-btn">{btnName}</button>;
 };
