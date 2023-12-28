@@ -32,6 +32,7 @@
 .sidebar-icon {
   font-size: larger;
   padding-right: 6px;
+  padding-top: 3px;
 }
 .l-sidebar-links:hover {
   background-color: var(--secondary);

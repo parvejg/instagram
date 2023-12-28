@@ -12,9 +12,9 @@
 .explore-page-img-wrapper {
   display: flex;
   background: white;
-  width: fit-content;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  margin: 0;
 }
 
 .explore-page-imgs {
