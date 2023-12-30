@@ -40,3 +40,13 @@
   padding-left: 6px;
   transition: 0.1s;
 }
+.left-icon-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  width: 100px;
+  padding: 0 1rem;
+}
+.left-icon-sidebar-icon {
+  font-size: 2rem;
+}

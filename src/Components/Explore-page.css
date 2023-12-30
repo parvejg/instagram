@@ -11,10 +11,12 @@
 
 .explore-page-img-wrapper {
   display: flex;
-  background: white;
+  background: rgb(141, 62, 62);
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  width: 80%;
+  height: 100vw;
 }
 
 .explore-page-imgs {

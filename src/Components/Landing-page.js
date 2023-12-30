@@ -12,8 +12,8 @@ export const LandingPage = () => {
   return (
     <div className="landing-page-container">
       {/* <LeftSidebar /> */}
-      {/* <SearchPage /> */}
-      <ExplorePage />
+      <SearchPage />
+      {/* <ExplorePage /> */}
       {/* <Contents />
       <RightSidebar /> */}
     </div>
