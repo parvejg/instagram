@@ -9,3 +9,12 @@ export const SidebarLink = ({ icon, linkName, href }) => {
     </div>
   );
 };
+export const SidebarIconLink = ({ icon, href }) => {
+  return (
+    <div>
+      <a href={href} className="sidebar-icon">
+        <span> {icon}</span>
+      </a>
+    </div>
+  );
+};
