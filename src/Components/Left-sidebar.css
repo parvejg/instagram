@@ -57,6 +57,10 @@
   gap: 1rem;
   width: 70px;
   height: 100vh;
-  border: 1px solid gray;
-  padding-top: 2rem;
+  border-right-color: 1px solid gray;
+}
+@media (max-width: 850px) {
+  .left-icon-sidebar-wrapper {
+    display: none;
+  }
 }

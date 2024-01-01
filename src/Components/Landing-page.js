@@ -8,15 +8,18 @@ import { Contents } from "./Contents";
 import { RightSidebar } from "./Right-sidebar";
 import { SearchPage } from "./Search-Page";
 import { ExplorePage } from "./Explore-page";
+import { ExploreImageCard } from "./ExploreImg-card";
 export const LandingPage = () => {
   return (
     <div className="landing-page-container">
       {/* <LeftSidebar /> */}
-      {/* <SearchPage /> */}
+      {/* <LeftIconSidebar />
+      <SearchPage /> */}
       {/* <ExplorePage /> */}
-      <LeftIconSidebar />
-      <Contents />
-      <RightSidebar />
+      {/* <LeftIconSidebar /> */}
+      {/* <Contents /> */}
+      {/* <RightSidebar /> */}
+      <ExploreImageCard />
     </div>
   );
 };

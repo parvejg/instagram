@@ -1,0 +1,7 @@
+.exploreimg-card-wrapper {
+  display: flex;
+  width: 700px;
+  height: 800px;
+  background-color: grey;
+  align-items: center;
+}

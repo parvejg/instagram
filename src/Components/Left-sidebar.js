@@ -69,7 +69,6 @@ export const LeftSidebar = () => {
 export const LeftIconSidebar = () => {
   return (
     <div className="left-icon-sidebar-wrapper">
-      <InstagramTextImage className="sidebar-text-img" />
       <SidebarIconLink icon={<FaInstagram />} />
       <SidebarIconLink icon={<AiFillHome />} />
       <SidebarIconLink icon={<IoSearch />} />

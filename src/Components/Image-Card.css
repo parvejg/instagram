@@ -13,7 +13,7 @@
   padding: 2rem 4.6rem 1rem;
   align-items: center;
   gap: 4px;
-  width: 81%;
+  width: 470px;
 }
 .cardImg-post-time-text {
   color: grey;
@@ -50,7 +50,7 @@
 }
 .cardImg-bottom-btns-wrapper {
   display: flex;
-  width: 80%;
+  width: 470px;
   padding-left: 4.5rem;
   padding-top: 1rem;
   justify-content: start;
@@ -105,4 +105,10 @@
 }
 .comment-input:focus {
   outline: none;
+}
+.image-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  align-items: center;
 }

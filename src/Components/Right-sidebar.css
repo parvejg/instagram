@@ -37,3 +37,8 @@
   gap: 1.3rem;
   margin-top: 1rem;
 }
+@media (max-width: 1100px) {
+  .right-sidebar-main-wrapper {
+    display: none;
+  }
+}
