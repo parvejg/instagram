@@ -1,12 +1,10 @@
 .search-page-wrapper {
   display: flex;
-  flex-direction: column;
-  min-width: 400px;
-  height: 100vh;
+  height: 100vw;
+  width: 500px;
   border-right: 1px solid gray;
   border-radius: 15px;
   justify-content: center;
-  text-align: center;
 }
 
 .search-page-heading {
@@ -39,12 +37,13 @@
   margin-top: 5rem;
   align-items: center;
   justify-content: center;
-  min-width: 100%;
   height: 100vh;
+  width: 440px;
 }
-/* .search-page-left-icon-sidebar-wrapper {
-  width: 80px;
+.search-page-left-icon-sidebar-wrapper {
+  padding: 1rem 0;
+  width: 60px;
+  height: 100vw;
   border: 1px solid gray;
   display: flex;
-  flex-direction: column;
-} */
+}

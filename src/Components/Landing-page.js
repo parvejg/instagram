@@ -13,13 +13,13 @@ export const LandingPage = () => {
   return (
     <div className="landing-page-container">
       {/* <LeftSidebar /> */}
-      {/* <LeftIconSidebar />
-      <SearchPage /> */}
+      {/* <LeftIconSidebar /> */}
+      <SearchPage />
       {/* <ExplorePage /> */}
       {/* <LeftIconSidebar /> */}
       {/* <Contents /> */}
       {/* <RightSidebar /> */}
-      <ExploreImageCard />
+      {/* <ExploreImageCard /> */}
     </div>
   );
 };
