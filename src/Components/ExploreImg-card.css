@@ -1,7 +1,7 @@
 .exploreimg-card-wrapper {
   display: flex;
-  width: 700px;
-  height: 800px;
+  width: 800px;
+  max-height: 700px;
   background-color: grey;
   align-items: center;
 }

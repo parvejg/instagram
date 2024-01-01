@@ -1,11 +1,10 @@
 import "./ExploreImg-card.css";
+import { ExplorePageImg } from "./ReusableComponents/Images";
 export const ExploreImageCard = () => {
   return (
     <div className="exploreimg-card-wrapper">
-      {/* <ExploreImageCard className="exploreImgCard-img" /> */}
-      <div className="explore-imgCard-content-wrapper">
-        <img src="./../public/down.jpg" alt="explore-img" />
-      </div>
+      <ExplorePageImg />
+      <div className="explore-imgCard-content-wrapper"></div>
     </div>
   );
 };

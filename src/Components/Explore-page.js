@@ -8,10 +8,10 @@ export const ExplorePage = () => {
         <LeftSidebar />
       </div>
       <div className="explore-page-img-wrapper">
-        <ExplorePageImg />
-        <ExplorePageImg />
-        <ExplorePageImg />
-        <ExplorePageImg />
+        <ExplorePageImg className="explore-page-imgs" />
+        <ExplorePageImg className="explore-page-imgs" />
+        <ExplorePageImg className="explore-page-imgs" />
+        <ExplorePageImg className="explore-page-imgs" />
       </div>
     </div>
   );

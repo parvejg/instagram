@@ -14,12 +14,12 @@ export const LandingPage = () => {
     <div className="landing-page-container">
       {/* <LeftSidebar /> */}
       {/* <LeftIconSidebar /> */}
-      <SearchPage />
+      {/* <SearchPage /> */}
       {/* <ExplorePage /> */}
       {/* <LeftIconSidebar /> */}
       {/* <Contents /> */}
       {/* <RightSidebar /> */}
-      {/* <ExploreImageCard /> */}
+      <ExploreImageCard />
     </div>
   );
 };
