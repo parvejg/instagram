@@ -1,6 +1,5 @@
 .profile-avatar {
   display: flex;
-  width: 100%;
   justify-content: flex-start;
   height: 50px;
 }
@@ -16,13 +15,16 @@
   color: rgb(111, 111, 245);
   font-weight: bold;
   cursor: pointer;
+  margin: 0;
 }
 
 .username {
   font-weight: bold;
+  margin: 0;
 }
 .name {
   font-weight: bold;
   color: gray;
   text-align: justify;
+  margin: 0;
 }

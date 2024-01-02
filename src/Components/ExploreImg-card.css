@@ -14,11 +14,6 @@
   min-width: 55%;
 }
 
-.explore-comments-container {
-  width: 100%;
-  min-height: 99%;
-  border-top: 1px solid gray;
-}
 .more-option-btn-wrapper {
   justify-content: start;
   flex-direction: column;
@@ -37,4 +32,13 @@
   padding: 0.3rem;
   width: 97%;
   border: 1px solid gray;
+}
+.explore-comments-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 80%;
+  border-top: 1px solid gray;
+  gap: 2px;
+  grid-row: 6px;
 }

@@ -1,6 +1,7 @@
 import { Avatar } from "./Avatar";
 import "./ExploreImg-card.css";
 import { FollowBtn } from "./Follow-Btn";
+import { CommentProfileAvatar } from "./ReusableComponents/Comment-profile-avatar";
 import { ExplorePageImg } from "./ReusableComponents/Images";
 import { ProfileAvatar } from "./ReusableComponents/Profile-avatar";
 export const ExploreImageCard = () => {
@@ -21,7 +22,39 @@ export const ExploreImageCard = () => {
             <button className="more-option-btn">---</button>
           </div>
           <div className="explore-comments-container">
-            <ProfileAvatar name="md parvej" userName="parvejpg321" />
+            <CommentProfileAvatar
+              Profileavatar={<ProfileAvatar userName="Parvej_321" />}
+              commentText="Awesome"
+              commentTime="1d"
+              reply="2 reply"
+              like="1 like"
+            />
+            <CommentProfileAvatar
+              Profileavatar={<ProfileAvatar userName="wazid212" />}
+              commentText="supperrr"
+              commentTime="4d"
+              reply="8 reply"
+              like="2 like"
+            />
+            <CommentProfileAvatar
+              Profileavatar={<ProfileAvatar userName="Najish_90" />}
+              commentText="lajawab"
+              commentTime="3d"
+              reply="4 reply"
+              like=" like"
+            />
+            <CommentProfileAvatar
+              Profileavatar={<ProfileAvatar userName="Javed_34" />}
+              commentText="outstanding"
+              commentTime="2d"
+              reply="reply"
+              like="2 like"
+            />
+          </div>
+          <div>
+            <button>00</button>
+            <button>00</button>
+            <button>00</button>
           </div>
         </div>
       </div>
