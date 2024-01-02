@@ -4,6 +4,7 @@
   background-color: white;
   font-weight: bold;
   cursor: pointer;
+  height: 15px;
 }
 .imgCard-follow-btn:hover {
   color: rgb(77, 77, 141);

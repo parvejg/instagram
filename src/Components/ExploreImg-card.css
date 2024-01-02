@@ -1,7 +1,40 @@
 .exploreimg-card-wrapper {
   display: flex;
   width: 800px;
-  max-height: 700px;
-  background-color: grey;
-  align-items: center;
+  height: 550px;
+}
+.explore-page-imgCard {
+  min-height: 550px;
+  width: 40%;
+}
+.explore-imgCard-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 55%;
+}
+
+.explore-comments-container {
+  width: 100%;
+  min-height: 99%;
+  border-top: 1px solid gray;
+}
+.more-option-btn-wrapper {
+  justify-content: start;
+  flex-direction: column;
+  text-align: end;
+  height: 100%;
+  padding: 0.4rem;
+}
+.more-option-btn {
+  position: relative;
+  top: -2.7rem;
+  background-color: white;
+  border: hidden;
+  cursor: pointer;
+}
+.explore-page-avatar-main-wrapper {
+  padding: 0.3rem;
+  width: 97%;
+  border: 1px solid gray;
 }
