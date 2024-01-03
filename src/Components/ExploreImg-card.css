@@ -1,7 +1,12 @@
 .exploreimg-card-wrapper {
   display: flex;
   width: 800px;
-  height: 550px;
+  max-height: 600px;
+  position: fixed;
+}
+.explore-imgCard-profileAvatar-wrapper {
+  display: flex;
+  min-width: 35%;
 }
 .explore-page-imgCard {
   min-height: 550px;
@@ -10,7 +15,7 @@
 .explore-imgCard-content-wrapper {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  max-height: 100%;
   min-width: 55%;
 }
 
@@ -32,13 +37,81 @@
   padding: 0.3rem;
   width: 97%;
   border: 1px solid gray;
+  margin: 0;
 }
 .explore-comments-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  min-height: 80%;
+  max-width: 100%;
+  min-height: 350px;
+  overflow: scroll;
   border-top: 1px solid gray;
-  gap: 2px;
-  grid-row: 6px;
+}
+.like-share-save-comment-input-wrapper {
+  min-height: 150px;
+  display: flex;
+}
+.like-share-save-comment-input-wrapper {
+  display: flex;
+  padding-left: 0.3rem;
+  gap: 0.3rem;
+}
+.explore-imgCard-like-btn {
+  font-size: 1.4rem;
+}
+.explore-imgCard-message-btn {
+  font-size: 1.4rem;
+}
+.explore-imgCard-share-btn {
+  font-size: 1.4rem;
+}
+.explore-imgCard-save-btn-wrapper {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  padding: 0.3rem;
+}
+.explore-imgCard-save-btn {
+  font-size: 1.4rem;
+  position: relative;
+  right: -23rem;
+  font-size: 5rem;
+  top: -1.3rem;
+}
+.explore-imgCard-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.explore-imgCard-comment-input {
+  height: 30px;
+  width: 100%;
+  position: relative;
+  left: -5rem;
+  top: 7rem;
+  border: hidden;
+}
+.explore-imgCard-comment-input:focus {
+  outline: none;
+}
+.explore-imgCard-post-btn {
+  text-align: end;
+  position: relative;
+  top: 7.5rem;
+  color: rgb(115, 115, 175);
+  left: 11rem;
+}
+.explore-imgCard-post-liks {
+  text-align: end;
+  position: relative;
+  left: -24.5rem;
+  bottom: -19px;
+  width: 100%;
+}
+.explore-imgCard-timing {
+  position: relative;
+  left: -15.5rem;
+  bottom: -29px;
+
+  display: flex;
 }

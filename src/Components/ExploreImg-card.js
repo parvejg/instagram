@@ -1,9 +1,13 @@
+import { FaRegHeart } from "react-icons/fa";
 import { Avatar } from "./Avatar";
 import "./ExploreImg-card.css";
 import { FollowBtn } from "./Follow-Btn";
 import { CommentProfileAvatar } from "./ReusableComponents/Comment-profile-avatar";
 import { ExplorePageImg } from "./ReusableComponents/Images";
 import { ProfileAvatar } from "./ReusableComponents/Profile-avatar";
+import { TbMessageCircle } from "react-icons/tb";
+import { BsSend } from "react-icons/bs";
+import { LuBookmark } from "react-icons/lu";
 export const ExploreImageCard = () => {
   return (
     <div className="exploreimg-card-wrapper">
@@ -13,11 +17,14 @@ export const ExploreImageCard = () => {
       />
       <div className="explore-page-avatar-main-wrapper">
         <div className="explore-imgCard-content-wrapper">
-          <ProfileAvatar
-            button="Follow"
-            name="md parvej"
-            userName="parvejpg321"
-          />
+          <div className="explore-imgCard-profileAvatar-wrapper">
+            <ProfileAvatar
+              button="Follow"
+              name="md parvej"
+              userName="parvejpg321"
+            />
+          </div>
+
           <div className="more-option-btn-wrapper">
             <button className="more-option-btn">---</button>
           </div>
@@ -50,11 +57,43 @@ export const ExploreImageCard = () => {
               reply="reply"
               like="2 like"
             />
+            <CommentProfileAvatar
+              Profileavatar={<ProfileAvatar userName="Javed_34" />}
+              commentText="outstanding"
+              commentTime="2d"
+              reply="reply"
+              like="2 like"
+            />
+            <CommentProfileAvatar
+              Profileavatar={<ProfileAvatar userName="Javed_34" />}
+              commentText="outstanding"
+              commentTime="2d"
+              reply="reply"
+              like="2 like"
+            />
+            <CommentProfileAvatar
+              Profileavatar={<ProfileAvatar userName="Javed_34" />}
+              commentText="outstanding"
+              commentTime="2d"
+              reply="reply"
+              like="2 like"
+            />
           </div>
-          <div>
-            <button>00</button>
-            <button>00</button>
-            <button>00</button>
+          <div className="like-share-save-comment-input-wrapper">
+            <FaRegHeart className="explore-imgCard-like-btn" />
+            <TbMessageCircle className="explore-imgCard-message-btn" />
+            <BsSend className="explore-imgCard-share-btn" />
+
+            <div className="explore-imgCard-save-btn-wrapper">
+              <LuBookmark className="explore-imgCard-save-btn" />
+              <input
+                placeholder="Add a comment...."
+                className="explore-imgCard-comment-input"
+              />
+              <span className="explore-imgCard-post-btn">Post</span>
+              <span className="explore-imgCard-timing">2 December </span>
+              <span className="explore-imgCard-post-liks">4433 likes</span>
+            </div>
           </div>
         </div>
       </div>
