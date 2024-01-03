@@ -1,19 +1,16 @@
 import "./Landing-page.css";
 import "./Avatar.css";
 import "./Left-sidebar.css";
-
-import { ExploreImageCard } from "./ExploreImg-card";
+import { RightSidebar } from "./Right-sidebar";
+import { LeftIconSidebar, LeftSidebar } from "./Left-sidebar";
+import { Contents } from "./Contents";
 export const LandingPage = () => {
   return (
     <div className="landing-page-container">
-      {/* <LeftSidebar /> */}
-      {/* <LeftIconSidebar /> */}
-      {/* <SearchPage /> */}
-      {/* <ExplorePage /> */}
-      {/* <LeftIconSidebar /> */}
-      {/* <Contents /> */}
-      {/* <RightSidebar /> */}
-      <ExploreImageCard />
+      <LeftIconSidebar />
+      <LeftSidebar />
+      <Contents />
+      <RightSidebar />
     </div>
   );
 };
