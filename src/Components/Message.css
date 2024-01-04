@@ -1,7 +1,33 @@
 .message-page-main-container {
   display: flex;
-  flex-direction: column;
-  height: 100vh;
+  height: fit-content;
   width: 500px;
+  height: 100vh;
+  justify-content: flex-start;
   border: 1px solid gray;
+}
+
+.left-iconSidebar-wrapper {
+  border: 1px solid gray;
+  width: 10%;
+  height: 100vh;
+}
+.userName-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 18%;
+  padding-left: 1rem;
+  text-align: center;
+  align-items: center;
+}
+.edit-icon {
+  font-size: larger;
+  border: 1px solid gray;
+}
+.message-links-wrapper {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  justify-content: space-between;
 }

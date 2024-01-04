@@ -75,15 +75,16 @@ export const LeftSidebar = () => {
 export const LeftIconSidebar = () => {
   return (
     <div className="left-icon-sidebar-wrapper">
-      <SidebarIconLink icon={<FaInstagram />} />
-      <SidebarIconLink icon={<AiFillHome />} />
-      <SidebarIconLink icon={<IoSearch />} />
-      <SidebarIconLink icon={<MdExplore />} />
-      <SidebarIconLink icon={<FcFilmReel />} />
-      <SidebarIconLink icon={<AiOutlineMessage />} />
-      <SidebarIconLink icon={<IoIosHeartEmpty />} />
-      <SidebarIconLink icon={<CiCirclePlus />} />
+      <SidebarIconLink to="/landing-page" icon={<FaInstagram />} />
+      <SidebarIconLink to="/landing-page" icon={<AiFillHome />} />
+      <SidebarIconLink to="/search-page" icon={<IoSearch />} />
+      <SidebarIconLink to="/explore-page" icon={<MdExplore />} />
+      <SidebarIconLink to="/" icon={<FcFilmReel />} />
+      <SidebarIconLink to="/message-page" icon={<AiOutlineMessage />} />
+      <SidebarIconLink to="/" icon={<IoIosHeartEmpty />} />
+      <SidebarIconLink to="/" icon={<CiCirclePlus />} />
       <SidebarIconLink
+        to="/"
         icon={
           <Avatar
             size="small"
@@ -93,7 +94,7 @@ export const LeftIconSidebar = () => {
         }
       />
 
-      <SidebarIconLink icon={<FiAlignJustify />} />
+      <SidebarIconLink to="/" icon={<FiAlignJustify />} />
     </div>
   );
 };
