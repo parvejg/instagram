@@ -4,6 +4,7 @@ import { LandingPage } from "./Components/Landing-page";
 import { SearchPage } from "./Components/Search-Page";
 import { ExplorePage } from "./Components/Explore-page";
 import { MessagePage } from "./Components/Message";
+import { ExploreImageCard } from "./Components/ExploreImg-card";
 function App() {
   return (
     <div className="App">
