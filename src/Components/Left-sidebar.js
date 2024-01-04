@@ -41,6 +41,7 @@ export const LeftSidebar = () => {
         linkName="Reels"
       />
       <SidebarLink
+        to="/message-page"
         icon={<AiOutlineMessage className="sidebar-icon" />}
         linkName="Messages"
       />
