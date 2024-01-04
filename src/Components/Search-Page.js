@@ -1,4 +1,4 @@
-import { IoCloseCircle, IoCloseCircleOutline } from "react-icons/io5";
+import { IoCloseCircleOutline } from "react-icons/io5";
 import { LeftIconSidebar } from "./Left-sidebar";
 import "./Search-page.css";
 export const SearchPage = () => {

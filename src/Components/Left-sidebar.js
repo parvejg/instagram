@@ -1,4 +1,5 @@
 import "./Left-sidebar.css";
+import "./Landing-page.css";
 import { IoSearch } from "react-icons/io5";
 import { InstagramTextImage } from "./ReusableComponents/InstagramText-img";
 import { FcFilmReel } from "react-icons/fc";
@@ -13,7 +14,6 @@ import {
   SidebarIconLink,
   SidebarLink,
 } from "./ReusableComponents/Sidebar-link";
-import { Link } from "react-router-dom";
 export const LeftSidebar = () => {
   return (
     <div className="landing-page-left-sidebar-wrapper">

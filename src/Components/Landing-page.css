@@ -3,3 +3,15 @@
   align-items: flex-start;
   width: fit-content;
 }
+
+@media (min-width: 900px) {
+  .landing-page-left-IconSidebar-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .landing-page-left-IconSidebar-wrapper {
+    display: none;
+  }
+}

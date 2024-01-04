@@ -58,18 +58,8 @@
   height: 100vh;
   border-right-color: 1px solid gray;
 }
-@media (min-width: 900px) {
-  .left-icon-sidebar-wrapper {
-    display: none;
-  }
-}
 @media (max-width: 900px) {
   .landing-page-left-sidebar-wrapper {
-    display: none;
-  }
-}
-@media (max-width: 650px) {
-  .left-icon-sidebar-wrapper {
     display: none;
   }
 }

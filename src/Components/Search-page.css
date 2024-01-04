@@ -1,6 +1,6 @@
 .search-page-wrapper {
   display: flex;
-  height: 100vw;
+  height: 100vh;
   width: 500px;
   border-right: 1px solid gray;
   border-radius: 15px;
@@ -48,7 +48,7 @@
 .search-page-left-icon-sidebar-wrapper {
   padding: 1rem 0;
   width: 60px;
-  height: 100vw;
+  height: 100vh;
   border: 1px solid gray;
   display: flex;
 }

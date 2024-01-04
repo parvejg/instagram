@@ -7,8 +7,12 @@ import { Contents } from "./Contents";
 export const LandingPage = () => {
   return (
     <div className="landing-page-container">
-      <LeftIconSidebar />
-      <LeftSidebar />
+      <div className="landing-page-left-IconSidebar-wrapper">
+        <LeftIconSidebar />
+      </div>
+      <div className="landing-page-left-sidebar-wrapper">
+        <LeftSidebar />
+      </div>
       <Contents />
       <RightSidebar />
     </div>
