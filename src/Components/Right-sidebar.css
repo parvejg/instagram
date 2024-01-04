@@ -1,7 +1,7 @@
 .right-sidebar-main-wrapper {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  min-width: 300px;
   justify-content: flex-start;
   text-align: start;
   padding: 2rem;
@@ -31,9 +31,9 @@
 .right-sidebar-users-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   padding: 0.4rem;
-  width: 300px;
+  max-width: 300px;
   gap: 1.3rem;
   margin-top: 1rem;
 }
