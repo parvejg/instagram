@@ -13,6 +13,7 @@ import {
   SidebarIconLink,
   SidebarLink,
 } from "./ReusableComponents/Sidebar-link";
+import { Link } from "react-router-dom";
 export const LeftSidebar = () => {
   return (
     <div className="landing-page-left-sidebar-wrapper">
@@ -20,14 +21,18 @@ export const LeftSidebar = () => {
         <InstagramTextImage className="sidebar-text-img" />
       </div>
       <SidebarLink
+        to="/landing-page"
         icon={<AiFillHome className="sidebar-icon" />}
         linkName="Home"
       />
       <SidebarLink
+        to="/search-page"
         icon={<IoSearch className="sidebar-icon" />}
         linkName="Search"
       />
+
       <SidebarLink
+        to="/explore-page"
         icon={<MdExplore className="sidebar-icon" />}
         linkName="Explore"
       />

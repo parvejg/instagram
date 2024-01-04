@@ -5,16 +5,14 @@
   justify-content: center;
 }
 .left-sidebar-linkName {
-  text-align: center;
-  padding-bottom: 9 px;
+  padding-bottom: 12px;
 }
 .left-sidebar-icon {
-  text-align: center;
+  padding-bottom: 14px;
 }
 /* icon */
 .sidebar-icon {
   font-size: 1.8rem;
-  padding: 0.7rem;
 }
 .sidebar-icon:hover {
   font-size: 1.9rem;

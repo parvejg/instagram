@@ -31,8 +31,7 @@
 }
 .sidebar-icon {
   font-size: larger;
-  padding-right: 6px;
-  padding-top: 3px;
+  padding-right: 19px;
 }
 .l-sidebar-links:hover {
   background-color: var(--secondary);
@@ -48,7 +47,6 @@
   padding: 0 1rem;
 }
 .left-icon-sidebar-icon {
-  font-size: 2rem;
 }
 /* left-icon-sidebar */
 .left-icon-sidebar-wrapper {
@@ -66,6 +64,11 @@
 }
 @media (max-width: 900px) {
   .landing-page-left-sidebar-wrapper {
+    display: none;
+  }
+}
+@media (max-width: 650px) {
+  .left-icon-sidebar-wrapper {
     display: none;
   }
 }
