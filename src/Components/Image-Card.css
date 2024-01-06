@@ -13,7 +13,7 @@
   padding: 0.5rem 3.6rem 1.3rem;
   align-items: center;
   gap: 4px;
-  width: 470px;
+  width: 575px;
 }
 .cardImg-post-time-text {
   color: grey;
@@ -51,7 +51,7 @@
 }
 .cardImg-bottom-btns-wrapper {
   display: flex;
-  width: 470px;
+  width: 550px;
   padding-left: 4.5rem;
   padding-top: 1rem;
   justify-content: start;
@@ -110,6 +110,6 @@
 .image-card-wrapper {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 700px;
   align-items: center;
 }

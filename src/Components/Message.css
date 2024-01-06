@@ -39,3 +39,8 @@
   color: black;
   font-size: large;
 }
+.message-page-user-list-wrapper {
+  width: 100%;
+  padding: 1rem;
+  gap: 5px;
+}
