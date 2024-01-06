@@ -1,0 +1,17 @@
+.notification-page-main-wrapper {
+  display: flex;
+  width: 450px;
+  height: 100vh;
+  border: 2px solid black;
+}
+.notification-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+.notification-page-leftIcon-sidebar-wrapper {
+  width: 13%;
+  border: 1px solid gray;
+}
