@@ -51,6 +51,7 @@ export const LeftSidebar = () => {
         linkName="Notifications"
       />
       <SidebarLink
+        to="/postSidebar-page"
         icon={<CiCirclePlus className="sidebar-icon" />}
         linkName="Create"
       />
@@ -83,7 +84,7 @@ export const LeftIconSidebar = () => {
       <SidebarIconLink to="/" icon={<FcFilmReel />} />
       <SidebarIconLink to="/message-page" icon={<AiOutlineMessage />} />
       <SidebarIconLink to="/notification-page" icon={<IoIosHeartEmpty />} />
-      <SidebarIconLink to="/" icon={<CiCirclePlus />} />
+      <SidebarIconLink to="/postSidebar-page" icon={<CiCirclePlus />} />
       <SidebarIconLink
         to="/"
         icon={

@@ -4,8 +4,8 @@ import { LandingPage } from "./Components/Landing-page";
 import { SearchPage } from "./Components/Search-Page";
 import { ExplorePage } from "./Components/Explore-page";
 import { MessagePage } from "./Components/Message";
-import { ExploreImageCard } from "./Components/ExploreImg-card";
 import { NotificationPage } from "./Components/Notification";
+import { CreateBtnSidebar } from "./Components/CreatePost-option";
 function App() {
   return (
     <div className="App">
@@ -17,6 +17,7 @@ function App() {
           <Route path="explore-page" Component={ExplorePage} />
           <Route path="message-page" Component={MessagePage} />
           <Route path="notification-page" Component={NotificationPage} />
+          <Route path="postSidebar-page" Component={CreateBtnSidebar} />
         </Routes>
       </Router>
     </div>
