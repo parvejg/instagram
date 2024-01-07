@@ -6,6 +6,7 @@ import { ExplorePage } from "./Components/Explore-page";
 import { MessagePage } from "./Components/Message";
 import { NotificationPage } from "./Components/Notification";
 import { CreateBtnSidebar } from "./Components/CreatePost-option";
+import { CreateNewPost } from "./Components/CreateNew-postPage";
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,7 @@ function App() {
           <Route path="message-page" Component={MessagePage} />
           <Route path="notification-page" Component={NotificationPage} />
           <Route path="postSidebar-page" Component={CreateBtnSidebar} />
+          <Route path="createPost-page" Component={CreateNewPost} />
         </Routes>
       </Router>
     </div>

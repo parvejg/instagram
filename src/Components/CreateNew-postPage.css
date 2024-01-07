@@ -1,0 +1,28 @@
+.createPost-page-main-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 430px;
+  height: 500px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.create-post-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid gray;
+  height: 90%;
+}
+.select-from-computer-btn {
+  background-color: rgb(88, 180, 233);
+  color: white;
+  padding: 0.3rem 1.5rem;
+  border-radius: 7px;
+  font-weight: bold;
+  font-size: large;
+  cursor: pointer;
+}
+.post-img-icon {
+  font-size: 3rem;
+}
