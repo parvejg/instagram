@@ -56,6 +56,7 @@ export const LeftSidebar = () => {
         linkName="Create"
       />
       <SidebarLink
+        to="/profile-page"
         icon={
           <Avatar
             size="small"
@@ -86,7 +87,7 @@ export const LeftIconSidebar = () => {
       <SidebarIconLink to="/notification-page" icon={<IoIosHeartEmpty />} />
       <SidebarIconLink to="/postSidebar-page" icon={<CiCirclePlus />} />
       <SidebarIconLink
-        to="/"
+        to="/profile-page"
         icon={
           <Avatar
             size="small"

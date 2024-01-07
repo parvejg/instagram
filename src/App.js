@@ -7,6 +7,7 @@ import { MessagePage } from "./Components/Message";
 import { NotificationPage } from "./Components/Notification";
 import { CreateBtnSidebar } from "./Components/CreatePost-option";
 import { CreateNewPost } from "./Components/CreateNew-postPage";
+import { ProfilePage } from "./Components/Profile-page";
 function App() {
   return (
     <div className="App">
@@ -20,6 +21,7 @@ function App() {
           <Route path="notification-page" Component={NotificationPage} />
           <Route path="postSidebar-page" Component={CreateBtnSidebar} />
           <Route path="createPost-page" Component={CreateNewPost} />
+          <Route path="profile-page" Component={ProfilePage} />
         </Routes>
       </Router>
     </div>

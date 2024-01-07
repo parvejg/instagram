@@ -1,0 +1,49 @@
+.profile-page-main-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vw;
+}
+.profile-page-left-sidebar-page-wrapper {
+  display: flex;
+  width: 300px;
+  justify-content: center;
+  height: 100vw;
+  border: 1px solid gray;
+}
+.profile-page-wrapper {
+  display: flex;
+  height: 400px;
+  width: 90%;
+  justify-content: start;
+}
+.profileAvatar-wrapper {
+  width: 200px;
+  height: 200px;
+  justify-content: start;
+  padding: 1rem 8rem 0;
+}
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.profile-page-name-bio-userName-wrapper {
+  display: flex;
+  width: 600px;
+  height: 230px;
+  gap: 0.5rem;
+  justify-content: start;
+  padding-top: 2rem;
+  text-align: center;
+}
+.profile-page-btn {
+  padding: 0.2rem 1.5rem;
+  height: 40px;
+  border-radius: 9px;
+  cursor: pointer;
+  border: hidden;
+}
+.profile-page-userName {
+  position: relative;
+  top: -10px;
+}
