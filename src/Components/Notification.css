@@ -3,6 +3,9 @@
   width: 450px;
   height: 100vh;
   border: 2px solid black;
+  overflow: scroll;
+  position: absolute;
+  z-index: 1;
 }
 .notification-page {
   display: flex;
@@ -10,8 +13,24 @@
   width: 100%;
   height: 100%;
   padding: 1rem;
+  justify-content: start;
+}
+.notification-new-text {
+  text-align: start;
+  font-weight: 700;
+  font-size: large;
 }
 .notification-page-leftIcon-sidebar-wrapper {
-  width: 13%;
+  max-width: 18%;
   border: 1px solid gray;
+  height: 100vw;
+  align-items: center;
+}
+
+.notification-page-users-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-self: start;
 }
