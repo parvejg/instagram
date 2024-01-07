@@ -12,38 +12,51 @@
 }
 .profile-page-wrapper {
   display: flex;
-  height: 400px;
-  width: 90%;
+  flex-direction: column;
   justify-content: start;
+  padding-top: 4rem;
+  gap: 3rem;
+  padding-left: 5rem;
 }
 .profileAvatar-wrapper {
+  display: flex;
   width: 200px;
   height: 200px;
   justify-content: start;
-  padding: 1rem 8rem 0;
 }
 .profile-img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
 }
-.profile-page-name-bio-userName-wrapper {
+.profile-page-name-userName-wrapper {
   display: flex;
-  width: 600px;
-  height: 230px;
-  gap: 0.5rem;
-  justify-content: start;
-  padding-top: 2rem;
-  text-align: center;
+  gap: 1rem;
 }
-.profile-page-btn {
-  padding: 0.2rem 1.5rem;
+
+.profile-page-userName {
+  position: relative;
+  top: -18px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.profile-post-followers-following-counting-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+.post-btn,
+.followers-btn,
+.following-btn {
+  padding: 0.1rem 1.5rem;
   height: 40px;
   border-radius: 9px;
   cursor: pointer;
+  font-size: large;
+  background: transparent;
   border: hidden;
 }
-.profile-page-userName {
+.profile-main-btn-wrapper {
+  left: 19rem;
+  top: -18rem;
   position: relative;
-  top: -10px;
 }
