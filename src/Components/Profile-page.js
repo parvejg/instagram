@@ -33,6 +33,7 @@ export const ProfilePage = () => {
             <span>Editor</span>
             <p>BCA Student at DAV College | Learning frontend developed.</p>
           </div>
+          <div className="profile-page-plus-icon-wrapper"></div>
         </div>
       </div>
     </div>
