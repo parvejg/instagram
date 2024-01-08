@@ -12,7 +12,6 @@
 }
 .profile-page-wrapper {
   display: flex;
-  flex-direction: column;
   justify-content: start;
   padding-top: 4rem;
   gap: 3rem;
@@ -32,11 +31,12 @@
 .profile-page-name-userName-wrapper {
   display: flex;
   gap: 1rem;
+  width: 100%;
+  height: 90px;
+  align-items: center;
 }
 
 .profile-page-userName {
-  position: relative;
-  top: -18px;
   font-size: 1.5rem;
   font-weight: 600;
 }
@@ -56,7 +56,12 @@
   border: hidden;
 }
 .profile-main-btn-wrapper {
-  left: 19rem;
-  top: -18rem;
-  position: relative;
+}
+.profile-bio-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 100%;
+  align-items: baseline;
+  gap: 7px;
 }

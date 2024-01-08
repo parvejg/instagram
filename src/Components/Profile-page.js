@@ -28,6 +28,11 @@ export const ProfilePage = () => {
             <BasicBtn className="followers-btn" btnName="60 followers" />
             <BasicBtn className="following-btn" btnName="66 following" />
           </div>
+          <div className="profile-bio-wrapper">
+            <b>Md parvez</b>
+            <span>Editor</span>
+            <p>BCA Student at DAV College | Learning frontend developed.</p>
+          </div>
         </div>
       </div>
     </div>
