@@ -1,0 +1,8 @@
+.more-options-page-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: skyblue;
+}

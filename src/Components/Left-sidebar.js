@@ -67,7 +67,7 @@ export const LeftSidebar = () => {
         linkName="Profile"
       />
 
-      <SidebarLink
+      <SidebarLink to="/moreOptions-page"
         icon={<FiAlignJustify className="sidebar-icon" />}
         linkName="More"
       />
@@ -97,7 +97,7 @@ export const LeftIconSidebar = () => {
         }
       />
 
-      <SidebarIconLink to="/" icon={<FiAlignJustify />} />
+      <SidebarIconLink to="/moreOptions-page"icon={<FiAlignJustify />} />
     </div>
   );
 };
