@@ -22,3 +22,8 @@
   transform: 1s;
   transition: 2s;
 }
+.l-sidebar-links{
+  text-align: center  ;
+  height: 25px;
+  width: 100%;
+}
