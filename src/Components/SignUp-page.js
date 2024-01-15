@@ -1,7 +1,25 @@
 import { FaFacebook } from "react-icons/fa";
+import axios from "axios";
 import "./SignUp-page.css";
 import { BasicInput } from "./ReusableComponents/BasicInput";
+import { Link, useNavigate } from "react-router-dom";
 export const SignUpPage = () => {
+  const signUpEndPoint = "/api/auth/signup";
+  const navigate = useNavigate();
+  const signUpHandler = async () => {
+    const requestBody = {
+      firstName: "Adarsh",
+      lastName: "Balika",
+      email: "adarshbalika@neog.camp",
+      password: "adarshBalika",
+    };
+    console.log(requestBody);
+    const response = await axios.post(signUpEndPoint, requestBody);
+    if (response.status === 201 || 200)
+      localStorage.setItem("encodedToken", response.data.encodedToken);
+    navigate("/landing-page");
+    console.log(response);
+  };
   return (
     <div className="signUp-page-container">
       <div className="signUp-page">
@@ -39,14 +57,16 @@ export const SignUpPage = () => {
             By signing up, you agree to our Terms , Privacy Policy and Cookies
             Policy .
           </small>
-          <button className="log-in-btn">Sign up</button>
+          <button className="log-in-btn" onClick={signUpHandler}>
+            Sign up
+          </button>
         </div>
       </div>
       <div className="sign-in-link-wrapper">
         Have an account?
-        <a href="" className="sign-up-link">
+        <Link to="/login-page" className="sign-up-link">
           Log in
-        </a>
+        </Link>
       </div>
     </div>
   );

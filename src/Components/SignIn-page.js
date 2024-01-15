@@ -3,7 +3,7 @@ import { BasicBtn, BasicInput } from "./ReusableComponents/BasicInput";
 import axios from "axios";
 import "./SignInPage.css";
 import { FaFacebook } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 export const SignInPage = () => {
   const logingAPI = "/api/auth/login";
 
@@ -16,11 +16,9 @@ export const SignInPage = () => {
       username: "adarshbalika",
       password: "adarshBalika123",
     };
-    console.log(requestBody);
     const response = await axios.post(logingAPI, requestBody);
     if (response.status === 201 || 200) navigate("/landing-page");
     localStorage.setItem("encodedToken", response.data.encodedToken);
-    console.log(response);
   };
   return (
     <div className="signIn-page-wrapper">
@@ -61,9 +59,9 @@ export const SignInPage = () => {
         </div>
         <div className="sign-up-link-wrapper">
           Don't have an account?{" "}
-          <a href="" className="sign-up-link">
+          <Link to="/signUp-page" href="" className="sign-up-link">
             Sign up
-          </a>
+          </Link>
         </div>
       </div>
     </div>

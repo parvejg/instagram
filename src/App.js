@@ -8,11 +8,11 @@ import { NotificationPage } from "./Components/Notification";
 import { CreateBtnSidebar } from "./Components/CreatePost-option";
 import { CreateNewPost } from "./Components/CreateNew-postPage";
 import { ProfilePage } from "./Components/Profile-page";
-<<<<<<< HEAD
 import { SignInPage } from "./Components/SignIn-page";
-=======
+
 import { MoreOptions } from "./Components/MoreOptions-page";
->>>>>>> c539f8208bc81b9deaa64179399eeeb657dd0d40
+import { SignUpPage } from "./Components/SignUp-page";
+
 function App() {
   return (
     <div className="App">
@@ -29,6 +29,8 @@ function App() {
           <Route path="createPost-page" Component={CreateNewPost} />
           <Route path="profile-page" Component={ProfilePage} />
           <Route path="moreOptions-page" Component={MoreOptions} />
+          <Route path="signUp-page" Component={SignUpPage} />
+          <Route path="login-page" Component={SignInPage} />
         </Routes>
       </Router>
     </div>
