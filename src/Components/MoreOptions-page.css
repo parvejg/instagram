@@ -1,0 +1,22 @@
+.more-options-page-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    height: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+}
+
+.moreOptions-page-links-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: .5rem;
+    border-radius: 20px;
+}
+.more-option-icon{
+    font-size: large;
+    padding: 0 5px;
+    text-align: center;
+}

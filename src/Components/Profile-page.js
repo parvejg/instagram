@@ -34,12 +34,13 @@ export const ProfilePage = () => {
             <p>BCA Student at DAV College | Learning frontend developed.</p>
           </div>
         </div>
-        <div className="profile-page-plus-icon-wrapper">
+       
+      </div>
+      <div className="profile-page-plus-icon-wrapper">
           <a href="/" className="plus-icon">
             <CiCirclePlus />
           </a>
         </div>
-      </div>
     </div>
   );
 };
