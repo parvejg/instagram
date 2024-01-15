@@ -8,11 +8,13 @@ import { NotificationPage } from "./Components/Notification";
 import { CreateBtnSidebar } from "./Components/CreatePost-option";
 import { CreateNewPost } from "./Components/CreateNew-postPage";
 import { ProfilePage } from "./Components/Profile-page";
+import { SignInPage } from "./Components/SignIn-page";
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
+          <Route path="/" Component={SignInPage} />
           <Route path="/" Component={LandingPage} />
           <Route path="landing-page" Component={LandingPage} />
           <Route path="search-page" Component={SearchPage} />
