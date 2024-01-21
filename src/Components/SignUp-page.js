@@ -3,15 +3,21 @@ import axios from "axios";
 import "./SignUp-page.css";
 import { BasicInput } from "./ReusableComponents/BasicInput";
 import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 export const SignUpPage = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const signUpEndPoint = "/api/auth/signup";
   const navigate = useNavigate();
   const signUpHandler = async () => {
     const requestBody = {
-      firstName: "Adarsh",
-      lastName: "Balika",
-      email: "adarshbalika@neog.camp",
-      password: "adarshBalika",
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      password: password,
     };
     console.log(requestBody);
     const response = await axios.post(signUpEndPoint, requestBody);
@@ -43,10 +49,22 @@ export const SignUpPage = () => {
         </a>
         <p>-------or--------</p>
         <div className="signUp-basic-input-container">
-          <BasicInput placeholder="Mobile Number or Email" />
-          <BasicInput placeholder="Full Name" />
-          <BasicInput placeholder="Username" />
-          <BasicInput placeholder="Password" />
+          <BasicInput
+            placeholder="First Name"
+            onChange={(e) => setFirstName(e.target.value)}
+          />
+          <BasicInput
+            placeholder="Last Name"
+            onChange={(e) => setLastName(e.target.value)}
+          />
+          <BasicInput
+            placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <BasicInput
+            placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </div>
         <div className="signUp-btn-and-privacy-wrapper">
           <small>

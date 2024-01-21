@@ -7,15 +7,26 @@ import { Link, useNavigate } from "react-router-dom";
 export const SignInPage = () => {
   const logingAPI = "/api/auth/login";
 
-  const [username, setusername] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   let navigate = useNavigate();
 
-  const loginHandler = async () => {
+  const loginAsGuestHandler = async () => {
     const requestBody = {
       username: "adarshbalika",
       password: "adarshBalika123",
     };
+    const response = await axios.post(logingAPI, requestBody);
+    if (response.status === 201 || 200) navigate("/landing-page");
+    localStorage.setItem("encodedToken", response.data.encodedToken);
+  };
+
+  const loginHandler = async () => {
+    const requestBody = {
+      username: username,
+      password: password,
+    };
+    console.log(requestBody);
     const response = await axios.post(logingAPI, requestBody);
     if (response.status === 201 || 200) navigate("/landing-page");
     localStorage.setItem("encodedToken", response.data.encodedToken);
@@ -37,8 +48,8 @@ export const SignInPage = () => {
           />
           <BasicInput
             type="text"
-            placeholder="Phone , user name, username"
-            onChange={(e) => setusername(e.target.value)}
+            placeholder="Phone ,  userName"
+            onChange={(e) => setUsername(e.target.value)}
           />
           <BasicInput
             placeholder="Password"
@@ -56,6 +67,9 @@ export const SignInPage = () => {
           <a href="#" className="forget-link">
             Forget password ?
           </a>
+          <Link href="#" className="forget-link" onClick={loginAsGuestHandler}>
+            Log in as guest
+          </Link>
         </div>
         <div className="sign-up-link-wrapper">
           Don't have an account?{" "}
