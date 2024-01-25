@@ -17,8 +17,10 @@ export const SignInPage = () => {
       password: "adarshBalika123",
     };
     const response = await axios.post(logingAPI, requestBody);
-    if (response.status === 201 || 200) navigate("/landing-page");
-    localStorage.setItem("encodedToken", response.data.encodedToken);
+    if (response.status === 201 || response.status === 200) {
+      navigate("/landing-page");
+      localStorage.setItem("encodedToken", response.data.encodedToken);
+    }
   };
 
   const loginHandler = async () => {
@@ -67,9 +69,9 @@ export const SignInPage = () => {
           <a href="#" className="forget-link">
             Forget password ?
           </a>
-          <Link href="#" className="forget-link" onClick={loginAsGuestHandler}>
+          <button onClick={loginAsGuestHandler}>
             Log in as guest
-          </Link>
+          </button>
         </div>
         <div className="sign-up-link-wrapper">
           Don't have an account?{" "}
