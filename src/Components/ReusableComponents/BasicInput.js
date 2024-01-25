@@ -10,9 +10,9 @@ export const BasicInput = ({ placeholder, type, onChange }) => {
     />
   );
 };
-export const BasicBtn = ({ btnName, onClick }) => {
+export const BasicBtn = ({ btnName, onClick, disabled }) => {
   return (
-    <button className="log-in-btn" onClick={onClick}>
+    <button className="log-in-btn" disabled={disabled} onClick={onClick}>
       {btnName}
     </button>
   );

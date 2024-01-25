@@ -10,7 +10,8 @@ export const SignInPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   let navigate = useNavigate();
-
+ const isLoginFieldEmpty = !(username&&password)
+ 
   const loginAsGuestHandler = async () => {
     const requestBody = {
       username: "adarshbalika",
@@ -28,7 +29,8 @@ export const SignInPage = () => {
       username: username,
       password: password,
     };
-    console.log(requestBody);
+    console.log(requestBody, isLoginFieldEmpty);
+    
     const response = await axios.post(logingAPI, requestBody);
     if (response.status === 201 || 200) navigate("/landing-page");
     localStorage.setItem("encodedToken", response.data.encodedToken);
@@ -58,7 +60,7 @@ export const SignInPage = () => {
             type="password"
             onChange={(e) => setPassword(e.target.value)}
           />
-          <BasicBtn btnName="Log in" onClick={loginHandler} />
+          <BasicBtn btnName="Log in"   disabled={isLoginFieldEmpty} onClick={loginHandler} />
           <p>-------or--------</p>
           <a
             className="facebook-link"
