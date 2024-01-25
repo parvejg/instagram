@@ -1,8 +1,24 @@
 import "./Contents.css";
 import "./Avatar.css";
+import { axios } from "axios";
+import { posts } from "../backend/db/posts";
 import { Avatar } from "./Avatar";
 import { ImageCard } from "./Image-card";
+import { useState } from "react";
 export const Contents = () => {
+  const [Array, setArray] = useState([]);
+  const postEndPoint = "/api/posts";
+  const requestBody = {
+    data: {
+      posts: Array,
+    },
+  };
+  const postHandler = async () => {
+    const response = await axios.get(postEndPoint, requestBody);
+    console.log("parcej", response);
+  };
+
+  postHandler();
   return (
     <div className="contents-main-wrapper">
       <div className="content-page-avatar-wrapper">

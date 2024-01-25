@@ -63,6 +63,7 @@ export const SignUpPage = () => {
           />
           <BasicInput
             placeholder="Password"
+            type="password"
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
