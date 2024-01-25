@@ -12,15 +12,13 @@ import { SignInPage } from "./Components/SignIn-page";
 
 import { MoreOptions } from "./Components/MoreOptions-page";
 import { SignUpPage } from "./Components/SignUp-page";
-
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" Component={SignInPage} />
-          <Route path="/" Component={LandingPage} />
-          <Route path="landing-page" Component={LandingPage} />
+          <Route path="/" Component={SignUpPage} />
+          <Route path="landing-page" Component={SignUpPage} />
           <Route path="search-page" Component={SearchPage} />
           <Route path="explore-page" Component={ExplorePage} />
           <Route path="message-page" Component={MessagePage} />
