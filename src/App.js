@@ -18,7 +18,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" Component={SignUpPage} />
-          <Route path="landing-page" Component={SignUpPage} />
+          <Route path="landing-page" Component={LandingPage} />
           <Route path="search-page" Component={SearchPage} />
           <Route path="explore-page" Component={ExplorePage} />
           <Route path="message-page" Component={MessagePage} />

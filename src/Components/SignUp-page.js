@@ -9,7 +9,7 @@ export const SignUpPage = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const isLoginFieldEmpty = !((firstName&&lastName),(email&&password))
   const signUpEndPoint = "/api/auth/signup";
   const navigate = useNavigate();
   const signUpHandler = async () => {
@@ -76,14 +76,14 @@ export const SignUpPage = () => {
             By signing up, you agree to our Terms , Privacy Policy and Cookies
             Policy .
           </small>
-          <button className="log-in-btn" onClick={signUpHandler}>
+          <button className="log-in-btn" disabled={isLoginFieldEmpty} onClick={signUpHandler}>
             Sign up
           </button>
         </div>
       </div>
       <div className="sign-in-link-wrapper">
         Have an account?
-        <Link to="/login-page" className="sign-up-link">
+        <Link to="/login-page"  className="sign-up-link">
           Log in
         </Link>
       </div>
