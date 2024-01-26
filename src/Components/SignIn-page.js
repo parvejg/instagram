@@ -71,7 +71,7 @@ export const SignInPage = () => {
           <a href="#" className="forget-link">
             Forget password ?
           </a>
-          <button onClick={loginAsGuestHandler}>
+          <button onClick={loginAsGuestHandler} className="login-as-guest-btn">
             Log in as guest
           </button>
         </div>
