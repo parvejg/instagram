@@ -1,7 +1,6 @@
 import "./Contents.css";
 import "./Avatar.css";
 import  axios  from "axios";
-import { posts } from "../backend/db/posts";
 import { Avatar } from "./Avatar";
 import { ImageCard } from "./Image-card";
 import { useEffect, useState } from "react";
@@ -17,15 +16,13 @@ export const Contents = () => {
        }
     }
     const response = await axios.get(postEndPoint,headers);
-    return response
+    if(response.status === 200 || response.status === 201){
+      return response.data
+    }
   };
-useEffect(()=>{
-   ( async ()=>{
-    const response = await postHandler()
-    console.log("parcej", response);
-
-  })()
-
+useEffect(async()=>{
+    const data = await postHandler()
+    setPosts(data?.posts)
 },[])
   return (
     <div className="contents-main-wrapper">
