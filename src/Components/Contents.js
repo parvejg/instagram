@@ -1,6 +1,6 @@
 import "./Contents.css";
 import "./Avatar.css";
-import { axios } from "axios";
+import  axios  from "axios";
 import { posts } from "../backend/db/posts";
 import { Avatar } from "./Avatar";
 import { ImageCard } from "./Image-card";
