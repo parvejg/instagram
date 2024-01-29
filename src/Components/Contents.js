@@ -1,29 +1,30 @@
 import "./Contents.css";
 import "./Avatar.css";
-import  axios  from "axios";
+import axios from "axios";
 import { Avatar } from "./Avatar";
 import { ImageCard } from "./Image-card";
 import { useEffect, useState } from "react";
 export const Contents = () => {
   const [posts, setPosts] = useState([]);
   const postEndPoint = "/api/posts";
-  
+
   const postHandler = async () => {
     const headers = {
-       headers: {
-      authorization: localStorage.getItem("encodedToken")
+      headers: {
+        authorization: localStorage.getItem("encodedToken")
 
-       }
+      }
     }
-    const response = await axios.get(postEndPoint,headers);
-    if(response.status === 200 || response.status === 201){
+    const response = await axios.get(postEndPoint, headers);
+    if (response.status === 200 || response.status === 201) {
       return response.data
     }
   };
-useEffect(async()=>{
+  useEffect(async () => {
     const data = await postHandler()
     setPosts(data?.posts)
-},[])
+  }, [])
+  console.log(posts);
   return (
     <div className="contents-main-wrapper">
       <div className="content-page-avatar-wrapper">
@@ -64,7 +65,11 @@ useEffect(async()=>{
         </div>
       </div>
       <div className="content-page-imageCard-wrapper">
-        <ImageCard />
+        {posts.map((userPost) => {
+          return <div key={userPost._id}>
+             <ImageCard   props={userPost} />
+             </div>
+        })}
       </div>
     </div>
   );
