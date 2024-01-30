@@ -20,9 +20,11 @@ export const Contents = () => {
       return response.data
     }
   };
-  useEffect(async () => {
-    const data = await postHandler()
-    setPosts(data?.posts)
+  useEffect( () => {
+    (async()=>{
+      const data = await postHandler()
+      setPosts(data?.posts)
+    })()
   }, [])
   console.log(posts);
   return (
@@ -64,13 +66,12 @@ export const Contents = () => {
           />
         </div>
       </div>
-      <div className="content-page-imageCard-wrapper">
-        {posts.map((userPost) => {
-          return <div key={userPost._id}>
-             <ImageCard   props={userPost} />
-             </div>
-        })}
-      </div>
+      {posts.map((userPost)=>{
+        return  <div key={userPost._id}  className="content-page-imageCard-wrapper">
+          <ImageCard  props={userPost} />
+        </div>
+      })}
+     
     </div>
   );
 };

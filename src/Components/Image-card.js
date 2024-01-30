@@ -5,7 +5,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { TbMessageCircle } from "react-icons/tb";
 import { BsSend } from "react-icons/bs";
 import { LuBookmark } from "react-icons/lu";
-export const ImageCard = (props) => {
+export const ImageCard = ({props}) => {
 const {username,likes,image,createdAt,content,comments} = props;
   return (
     <div className="image-card-main-wrapper">
