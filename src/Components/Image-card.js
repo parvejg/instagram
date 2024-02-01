@@ -2,11 +2,29 @@ import "./Image-Card.css";
 import { Avatar } from "./Avatar";
 import { FollowBtn } from "./Follow-Btn";
 import { FaRegHeart } from "react-icons/fa";
+import axios from "axios"
 import { TbMessageCircle } from "react-icons/tb";
 import { BsSend } from "react-icons/bs";
 import { LuBookmark } from "react-icons/lu";
 export const ImageCard = ({props}) => {
-const {username,likes,image,createdAt,content,comments} = props;
+const {username,likes,image,createdAt,content,comments , _id} = props;
+
+const likeHandler = async (_id)=>{
+  const likeEndPoint = `/api/posts/like/${_id}`
+  const requestBody = {}
+  const headers = {
+    headers: {
+      authorization: localStorage.getItem("encodedToken")
+
+    }
+  }
+const response = await axios.post(likeEndPoint, headers,requestBody)
+if(response.status === 201 || response.status === 200){
+  console.log("likedata", response);
+return response
+}
+
+}
   return (
     <div className="image-card-main-wrapper">
       <div className="imgCard-avatar-wrapper">
@@ -30,7 +48,9 @@ const {username,likes,image,createdAt,content,comments} = props;
         />
       </div>
       <div className="cardImg-bottom-btns-wrapper">
-        <FaRegHeart className="like-btn" />
+      <button onClick={()=> likeHandler(_id)}>
+      <FaRegHeart className="like-btn" />
+        </button>  
         <TbMessageCircle className="message-btn" />
         <BsSend className="share-btn" />
         <div className="save-btn-wrapper">

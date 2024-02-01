@@ -7,14 +7,14 @@ import { useEffect, useState } from "react";
 export const Contents = () => {
   const [posts, setPosts] = useState([]);
   const postEndPoint = "/api/posts";
+  const headers = {
+    headers: {
+      authorization: localStorage.getItem("encodedToken")
 
-  const postHandler = async () => {
-    const headers = {
-      headers: {
-        authorization: localStorage.getItem("encodedToken")
-
-      }
     }
+  }
+  const postHandler = async () => {
+    
     const response = await axios.get(postEndPoint, headers);
     if (response.status === 200 || response.status === 201) {
       return response.data
@@ -26,7 +26,8 @@ export const Contents = () => {
       setPosts(data?.posts)
     })()
   }, [])
-  console.log(posts);
+
+
   return (
     <div className="contents-main-wrapper">
       <div className="content-page-avatar-wrapper">
