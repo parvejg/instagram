@@ -37,31 +37,28 @@ export const RightSidebar = () => {
   //     }
   //   }
   return (
-    <div>
+    <div className="right-sidebar-main-wrapper" >
+
+      <ProfileAvatar
+        userName="parvej"
+        name="MD Parvez"
+        button={<FollowBtn btnName="Switch" />}
+      />
+      <div className="see-all-btn-wrapper">
+        <small className="suggested-for-you-text">Suggested for you</small>
+        <button className="see-all-btn">See All</button>
+      </div>
       {
         usersData.map((users) => {
-
-         
-          return <div className="right-sidebar-main-wrapper" key={users._id}>
-
+          return <div className="right-sidebar-users-wrapper" key={users._id}>
             <ProfileAvatar
-              userName="parvej"
-              name="MD Parvez"
-              button={<FollowBtn btnName="Switch" />}
+              userName={users.username}
+              name="follow you"
+              button={<FollowBtn btnName="Follow" />}
             />
-            <div className="see-all-btn-wrapper">
-              <small className="suggested-for-you-text">Suggested for you</small>
-              <button className="see-all-btn">See All</button>
-            </div>
-            <div className="right-sidebar-users-wrapper">
-              <ProfileAvatar
-                userName={users.username}
-                name="follow you"
-                button={<FollowBtn  btnName="Follow" />}
-              />
-            
-            </div>
+
           </div>
+
 
         })
       }
