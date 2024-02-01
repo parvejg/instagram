@@ -18,13 +18,15 @@ const likeHandler = async (_id)=>{
 
     }
   }
-const response = await axios.post(likeEndPoint, headers,requestBody)
+const response = await axios.post(likeEndPoint,requestBody,headers)
 if(response.status === 201 || response.status === 200){
   console.log("likedata", response);
 return response
 }
-
 }
+const createdAtTime = new Date(createdAt)
+const date1 = createdAtTime.getDay()
+console.log({date1, createdAtTime}, );
   return (
     <div className="image-card-main-wrapper">
       <div className="imgCard-avatar-wrapper">
@@ -33,7 +35,7 @@ return response
           src={image}
         />
         <small className="userName">{username}</small>
-        <small className="cardImg-post-time-text">{createdAt}</small>
+        <small className="cardImg-post-time-text">{date1}</small>
         <FollowBtn btnName="Follow" />
         <div className="cardImg-toggle-btn-wrapper">
           <button className="imgCard-toggle-btn">...</button>

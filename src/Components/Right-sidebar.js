@@ -28,14 +28,14 @@ export const RightSidebar = () => {
     })()
   }, [])
 
-  // const followHandler = async (users)=>{
-  //   const followEndPoint = `{/api/users/follow/${users._id}}`
-  //     const response = await axios.post(followEndPoint,headers)
-  //     if(response.status === 200 || response.status === 201){
-  //     console.log("jdjdj", response);
-  //       return response
-  //     }
-  //   }
+  const followHandler = async (users)=>{
+    const followEndPoint = `{/api/users/follow/${users._id}}`
+      const response = await axios.post(followEndPoint,headers)
+      if(response.status === 200 || response.status === 201){
+      console.log("jdjdj", response);
+        return response
+      }
+    }
   return (
     <div className="right-sidebar-main-wrapper" >
 
@@ -54,7 +54,7 @@ export const RightSidebar = () => {
             <ProfileAvatar
               userName={users.username}
               name="follow you"
-              button={<FollowBtn btnName="Follow" />}
+              button={<FollowBtn onClick={()=>followHandler(users)} btnName="Follow" />}
             />
 
           </div>
