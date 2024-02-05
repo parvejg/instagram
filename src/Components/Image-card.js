@@ -6,18 +6,19 @@ import axios from "axios"
 import { TbMessageCircle } from "react-icons/tb";
 import { BsSend } from "react-icons/bs";
 import { LuBookmark } from "react-icons/lu";
+import { useEffect } from "react";
 export const ImageCard = ({props}) => {
 const {username,likes,image,createdAt,content,comments , _id} = props;
+const headers = {
+  headers: {
+    authorization: localStorage.getItem("encodedToken")
+
+  }
+}
+const requestBody = {}
+const likeEndPoint = `/api/posts/like/${_id}`
 
 const likeHandler = async (_id)=>{
-  const likeEndPoint = `/api/posts/like/${_id}`
-  const requestBody = {}
-  const headers = {
-    headers: {
-      authorization: localStorage.getItem("encodedToken")
-
-    }
-  }
 const response = await axios.post(likeEndPoint,requestBody,headers)
 if(response.status === 201 || response.status === 200){
   console.log("likedata", response);
@@ -26,7 +27,20 @@ return response
 }
 const createdAtTime = new Date(createdAt)
 const date1 = createdAtTime.getDay()
-console.log({date1, createdAtTime}, );
+
+// call bookMark EndPoint 
+const bookMarkHandler = async(_id)=>{
+const bookMarkEndPoint = `/api/users/bookmark/${_id}`
+const response  = await axios.post(bookMarkEndPoint,requestBody,headers)
+console.log("bookMarkData", response);
+return response.data
+}
+useEffect(()=>{
+  ( async()=>{
+const data = await bookMarkHandler()
+console.log("bookmarkData", data);
+  })()
+},[])
   return (
     <div className="image-card-main-wrapper">
       <div className="imgCard-avatar-wrapper">
@@ -56,7 +70,10 @@ console.log({date1, createdAtTime}, );
         <TbMessageCircle className="message-btn" />
         <BsSend className="share-btn" />
         <div className="save-btn-wrapper">
+          <button onClick={()=>bookMarkHandler(_id)}>
           <LuBookmark className="save-btn" />
+
+          </button>
         </div>
       </div>
       <small className="current-likes">{likes?.likeCount} likes</small>

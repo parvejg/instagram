@@ -17,7 +17,6 @@ export const RightSidebar = () => {
 
     const response = await axios.get(userEndPoint)
     if (response.status === 201 || response.status === 200) {
-      console.log(response.data);
       return response.data
     }
   }
@@ -32,7 +31,6 @@ export const RightSidebar = () => {
     const followEndPoint = `{/api/users/follow/${users._id}}`
       const response = await axios.post(followEndPoint,headers)
       if(response.status === 200 || response.status === 201){
-      console.log("jdjdj", response);
         return response
       }
     }
