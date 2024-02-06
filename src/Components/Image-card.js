@@ -17,7 +17,7 @@ const headers = {
 }
 const requestBody = {}
 const likeEndPoint = `/api/posts/like/${_id}`
-
+// call like EndPoint 
 const likeHandler = async (_id)=>{
 const response = await axios.post(likeEndPoint,requestBody,headers)
 if(response.status === 201 || response.status === 200){
@@ -27,7 +27,14 @@ return response
 }
 const createdAtTime = new Date(createdAt)
 const date1 = createdAtTime.getDay()
+// call dislike EndPoint 
 
+const dislikeHandler = async(_id)=>{
+  const dislikeEndPoint = `/api/posts/dislike/${_id}`
+  const response = await axios.post(dislikeEndPoint,requestBody,headers)
+  console.log("dislikeData" , response.data);
+  return response.data
+}
 // call bookMark EndPoint 
 const bookMarkHandler = async(_id)=>{
 const bookMarkEndPoint = `/api/users/bookmark/${_id}`
@@ -35,7 +42,17 @@ const response  = await axios.post(bookMarkEndPoint,requestBody,headers)
 console.log("bookMarkData", response);
 return response.data
 }
+// call remove bookMark EndPoint
 
+const removeBookMarkHandler = async (_id)=>{
+  const removeBookMarkEndPoint = `/api/users/remove-bookmark/${_id}`
+  const response = await axios.post(removeBookMarkEndPoint,requestBody,headers)
+  if(response.status === 200 || response.status === 201){
+    console.log("remove bookMark data",response);
+  return response
+  }
+  
+}
   return (
     <div className="image-card-main-wrapper">
       <div className="imgCard-avatar-wrapper">
@@ -59,13 +76,13 @@ return response.data
         />
       </div>
       <div className="cardImg-bottom-btns-wrapper">
-      <button onClick={()=> likeHandler(_id)}>
+      <button onClick={()=> dislikeHandler(_id)}>
       <FaRegHeart className="like-btn" />
         </button>  
         <TbMessageCircle className="message-btn" />
         <BsSend className="share-btn" />
         <div className="save-btn-wrapper">
-          <button onClick={()=>bookMarkHandler(_id)}>
+          <button onClick={()=> removeBookMarkHandler(_id)}>
           <LuBookmark className="save-btn" />
           </button>
         </div>
