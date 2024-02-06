@@ -13,7 +13,7 @@ export const Contents = () => {
 
     }
   }
-  const postHandler = async () => {
+  const getPostHandler = async () => {
     
     const response = await axios.get(postEndPoint, headers);
     if (response.status === 200 || response.status === 201) {
@@ -22,7 +22,7 @@ export const Contents = () => {
   };
   useEffect( () => {
     (async()=>{
-      const data = await postHandler()
+      const data = await getPostHandler()
       setPosts(data?.posts)
     })()
   }, [])

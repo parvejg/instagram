@@ -35,12 +35,7 @@ const response  = await axios.post(bookMarkEndPoint,requestBody,headers)
 console.log("bookMarkData", response);
 return response.data
 }
-useEffect(()=>{
-  ( async()=>{
-const data = await bookMarkHandler()
-console.log("bookmarkData", data);
-  })()
-},[])
+
   return (
     <div className="image-card-main-wrapper">
       <div className="imgCard-avatar-wrapper">
@@ -72,7 +67,6 @@ console.log("bookmarkData", data);
         <div className="save-btn-wrapper">
           <button onClick={()=>bookMarkHandler(_id)}>
           <LuBookmark className="save-btn" />
-
           </button>
         </div>
       </div>
