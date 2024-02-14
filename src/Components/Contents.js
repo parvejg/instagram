@@ -3,9 +3,12 @@ import "./Avatar.css";
 import axios from "axios";
 import { Avatar } from "./Avatar";
 import { ImageCard } from "./Image-card";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AppContext } from "./UseContex";
 export const Contents = () => {
   const [posts, setPosts] = useState([]);
+  const context = useContext(AppContext)
+  const {dispatch, state} = context
   const postEndPoint = "/api/posts";
   const headers = {
     headers: {
@@ -17,6 +20,7 @@ export const Contents = () => {
     
     const response = await axios.get(postEndPoint, headers);
     if (response.status === 200 || response.status === 201) {
+
       return response.data
     }
   };
@@ -24,6 +28,7 @@ export const Contents = () => {
     (async()=>{
       const data = await getPostHandler()
       setPosts(data?.posts)
+      
     })()
   }, [])
 
@@ -69,7 +74,7 @@ export const Contents = () => {
       </div>
       {posts.map((userPost)=>{
         return  <div key={userPost._id}  className="content-page-imageCard-wrapper">
-          <ImageCard  props={userPost} />
+          <ImageCard  props={userPost} setPosts={setPosts} />
         </div>
       })}
      

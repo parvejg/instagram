@@ -6,53 +6,68 @@ import axios from "axios"
 import { TbMessageCircle } from "react-icons/tb";
 import { BsSend } from "react-icons/bs";
 import { LuBookmark } from "react-icons/lu";
-import { useEffect } from "react";
-export const ImageCard = ({props}) => {
-const {username,likes,image,createdAt,content,comments , _id} = props;
-const headers = {
-  headers: {
-    authorization: localStorage.getItem("encodedToken")
+import { useContext, useEffect, useState } from "react";
+import { AppContext } from "./UseContex";
+
+
+export const ImageCard = ({ props }) => {
+  const { username, likes, image, createdAt, content, comments, setPosts, _id } = props;
+  const context = useContext(AppContext)
+  const { dispatch } = context;
+  const [isPostLiked, SetIsPostLiked] = useState(false)
+  const headers = {
+    headers: {
+      authorization: localStorage.getItem("encodedToken")
+
+    }
+  }
+  const requestBody = {}
+  const likeEndPoint = `/api/posts/like/${_id}`
+  // call like EndPoint 
+  const likeHandler = async (_id) => {
+    const response = await axios.post(likeEndPoint, requestBody, headers)
+    if (response.status === 201 || response.status === 200) {
+      SetIsPostLiked(true)
+      dispatch({ type: "likeData", payload: response.data })
+      console.log("likedata", response);
+      setPosts(response)
+      return response
+    }
+  }
+  const createdAtTime = new Date(createdAt)
+  const date1 = createdAtTime.getDay()
+  // call dislike EndPoint 
+
+  const dislikeHandler = async (_id) => {
+    const dislikeEndPoint = `/api/posts/dislike/${_id}`
+    const response = await axios.post(dislikeEndPoint, requestBody, headers)
+    if (response.status === 200 || response.status === 201) {
+      SetIsPostLiked(false)
+      console.log("dislikeData", response.data);
+      return response.data
+    }
 
   }
-}
-const requestBody = {}
-const likeEndPoint = `/api/posts/like/${_id}`
-// call like EndPoint 
-const likeHandler = async (_id)=>{
-const response = await axios.post(likeEndPoint,requestBody,headers)
-if(response.status === 201 || response.status === 200){
-  console.log("likedata", response);
-return response
-}
-}
-const createdAtTime = new Date(createdAt)
-const date1 = createdAtTime.getDay()
-// call dislike EndPoint 
-
-const dislikeHandler = async(_id)=>{
-  const dislikeEndPoint = `/api/posts/dislike/${_id}`
-  const response = await axios.post(dislikeEndPoint,requestBody,headers)
-  console.log("dislikeData" , response.data);
-  return response.data
-}
-// call bookMark EndPoint 
-const bookMarkHandler = async(_id)=>{
-const bookMarkEndPoint = `/api/users/bookmark/${_id}`
-const response  = await axios.post(bookMarkEndPoint,requestBody,headers)
-console.log("bookMarkData", response);
-return response.data
-}
-// call remove bookMark EndPoint
-
-const removeBookMarkHandler = async (_id)=>{
-  const removeBookMarkEndPoint = `/api/users/remove-bookmark/${_id}`
-  const response = await axios.post(removeBookMarkEndPoint,requestBody,headers)
-  if(response.status === 200 || response.status === 201){
-    console.log("remove bookMark data",response);
-  return response
+  // call bookMark EndPoint 
+  const bookMarkHandler = async (_id) => {
+    const bookMarkEndPoint = `/api/users/bookmark/${_id}`
+    const response = await axios.post(bookMarkEndPoint, requestBody, headers)
+    console.log("bookMarkData", response);
+    return response.data
   }
-  
-}
+  // call remove bookMark EndPoint
+
+  const removeBookMarkHandler = async (_id) => {
+    const removeBookMarkEndPoint = `/api/users/remove-bookmark/${_id}`
+    const response = await axios.post(removeBookMarkEndPoint, requestBody, headers)
+    if (response.status === 200 || response.status === 201) {
+      console.log("remove bookMark data", response);
+      return response
+    }
+
+  }
+  const likeBtnHandler = likeHandler ? likeHandler : dislikeHandler
+
   return (
     <div className="image-card-main-wrapper">
       <div className="imgCard-avatar-wrapper">
@@ -76,20 +91,30 @@ const removeBookMarkHandler = async (_id)=>{
         />
       </div>
       <div className="cardImg-bottom-btns-wrapper">
-      <button onClick={()=> dislikeHandler(_id)}>
-      <FaRegHeart className="like-btn" />
-        </button>  
+        {isPostLiked ? (
+          <button onClick={() => dislikeHandler(_id)}> <FaRegHeart className="like-btn" /></button>
+
+        ) :
+
+          (
+            <button onClick={() => likeHandler(_id)}>
+              <FaRegHeart className="like-btn" />
+            </button>
+          )
+        }
+
+
         <TbMessageCircle className="message-btn" />
         <BsSend className="share-btn" />
         <div className="save-btn-wrapper">
-          <button onClick={()=> removeBookMarkHandler(_id)}>
-          <LuBookmark className="save-btn" />
+          <button onClick={() => removeBookMarkHandler(_id)}>
+            <LuBookmark className="save-btn" />
           </button>
         </div>
       </div>
       <small className="current-likes">{likes?.likeCount} likes</small>
       <small className="card-img-discription">
-       {content}
+        {content}
       </small>
       <button className="view-comments-btn"> View all comment {comments?.length}</button>
       <input placeholder="Add a comment...." className="comment-input" />
