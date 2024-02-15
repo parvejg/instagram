@@ -44,7 +44,18 @@
 .like-btn {
   font-size: 1.5rem;
   cursor: pointer;
+  background-color: red;
 }
+.disLike-btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.dislike-btn-wrapper , .like-btn-wrapper{
+  overflow: hidden;
+  border: hidden;
+  margin: 0;
+}
+
 .save-btn {
   font-size: 1.5rem;
   cursor: pointer;

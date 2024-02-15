@@ -30,7 +30,6 @@ export const ImageCard = ({ props }) => {
       SetIsPostLiked(true)
       dispatch({ type: "likeData", payload: response.data })
       console.log("likedata", response);
-      setPosts(response)
       return response
     }
   }
@@ -66,7 +65,6 @@ export const ImageCard = ({ props }) => {
     }
 
   }
-  const likeBtnHandler = likeHandler ? likeHandler : dislikeHandler
 
   return (
     <div className="image-card-main-wrapper">
@@ -92,13 +90,12 @@ export const ImageCard = ({ props }) => {
       </div>
       <div className="cardImg-bottom-btns-wrapper">
         {isPostLiked ? (
-          <button onClick={() => dislikeHandler(_id)}> <FaRegHeart className="like-btn" /></button>
+          <button className="dislike-btn-wrapper" onClick={() => dislikeHandler(_id)}> <FaRegHeart className="like-btn" /></button>
 
         ) :
-
           (
-            <button onClick={() => likeHandler(_id)}>
-              <FaRegHeart className="like-btn" />
+            <button className="like-btn-wrapper" onClick={() => likeHandler(_id)}>
+              <FaRegHeart className= "disLike-btn" />
             </button>
           )
         }
