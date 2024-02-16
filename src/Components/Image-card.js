@@ -8,13 +8,12 @@ import { BsSend } from "react-icons/bs";
 import { LuBookmark } from "react-icons/lu";
 import { useContext, useEffect, useState } from "react";
 import { AppContext } from "./UseContex";
-
-
-export const ImageCard = ({ props }) => {
-  const { username, likes, image, createdAt, content, comments, setPosts, _id } = props;
+export const ImageCard = ({ userPost , setPosts,getPostHandler }) => {
+  const { username, likes, image, createdAt, content, comments, _id } = userPost;
   const context = useContext(AppContext)
   const { dispatch } = context;
   const [isPostLiked, SetIsPostLiked] = useState(false)
+  const [isPostBookMark, setIsPostBookMark] = useState(false)
   const headers = {
     headers: {
       authorization: localStorage.getItem("encodedToken")
@@ -28,9 +27,9 @@ export const ImageCard = ({ props }) => {
     const response = await axios.post(likeEndPoint, requestBody, headers)
     if (response.status === 201 || response.status === 200) {
       SetIsPostLiked(true)
-      dispatch({ type: "likeData", payload: response.data })
+      dispatch({ type: "LikeData", payload: response.data })
+      setPosts(response?.data.posts)
       console.log("likedata", response);
-      return response
     }
   }
   const createdAtTime = new Date(createdAt)
@@ -42,8 +41,9 @@ export const ImageCard = ({ props }) => {
     const response = await axios.post(dislikeEndPoint, requestBody, headers)
     if (response.status === 200 || response.status === 201) {
       SetIsPostLiked(false)
+      dispatch({type: "DislikeData" , payload: response.data})
+      setPosts(response?.data.posts)
       console.log("dislikeData", response.data);
-      return response.data
     }
 
   }
@@ -51,8 +51,12 @@ export const ImageCard = ({ props }) => {
   const bookMarkHandler = async (_id) => {
     const bookMarkEndPoint = `/api/users/bookmark/${_id}`
     const response = await axios.post(bookMarkEndPoint, requestBody, headers)
+    if (response.status === 200 || response.status === 201) {
+    setIsPostBookMark(true)
     console.log("bookMarkData", response);
-    return response.data
+// const updatedPostData = await  getPostHandler()
+// setPosts(updatedPostData)
+    }
   }
   // call remove bookMark EndPoint
 
@@ -60,6 +64,7 @@ export const ImageCard = ({ props }) => {
     const removeBookMarkEndPoint = `/api/users/remove-bookmark/${_id}`
     const response = await axios.post(removeBookMarkEndPoint, requestBody, headers)
     if (response.status === 200 || response.status === 201) {
+      setIsPostBookMark(false)
       console.log("remove bookMark data", response);
       return response
     }
@@ -104,9 +109,16 @@ export const ImageCard = ({ props }) => {
         <TbMessageCircle className="message-btn" />
         <BsSend className="share-btn" />
         <div className="save-btn-wrapper">
-          <button onClick={() => removeBookMarkHandler(_id)}>
+          {
+            isPostBookMark ? (
+              <button className="bookMark-btn-wrapper" onClick={() => removeBookMarkHandler(_id)}>
+              <LuBookmark className="removeBookMark-btn" />
+            </button>
+            ) : ( <button className="bookMark-btn-wrapper" onClick={() => bookMarkHandler(_id)}>
             <LuBookmark className="save-btn" />
-          </button>
+          </button>)
+          }
+         
         </div>
       </div>
       <small className="current-likes">{likes?.likeCount} likes</small>

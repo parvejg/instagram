@@ -1,19 +1,25 @@
 import {  createContext, useReducer } from "react";
 export const AppContext  = createContext();
 
- const reducerFunction =(action, state)=>{
+ const reducerFunction =(state,action)=>{
    switch (action.type) {
-      case "likeData":
+      case "LikeData":
          return{
             ...state,
             likeData: action.payload,
          }
+         case "DislikeData":
+            return{
+               ...state,
+               DislikeData: action.payload
+            }
       default: 
       return state;
    }
  }
  const initialState = {
-    likeData: []
+    likeData: [],
+    DislikeData: []
     
  }
 

@@ -8,6 +8,7 @@ import { AppContext } from "./UseContex";
 export const Contents = () => {
   const [posts, setPosts] = useState([]);
   const context = useContext(AppContext)
+  console.log({context});
   const {dispatch, state} = context
   const postEndPoint = "/api/posts";
   const headers = {
@@ -74,7 +75,7 @@ export const Contents = () => {
       </div>
       {posts.map((userPost)=>{
         return  <div key={userPost._id}  className="content-page-imageCard-wrapper">
-          <ImageCard  props={userPost} setPosts={setPosts} />
+          <ImageCard  userPost={userPost} setPosts={setPosts} getPostHandler={getPostHandler} />
         </div>
       })}
      

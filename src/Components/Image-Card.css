@@ -50,15 +50,23 @@
   font-size: 1.5rem;
   cursor: pointer;
 }
-.dislike-btn-wrapper , .like-btn-wrapper{
+.dislike-btn-wrapper , .like-btn-wrapper , .bookMark-btn-wrapper{
   overflow: hidden;
   border: hidden;
   margin: 0;
+  background-color: white;
 }
 
 .save-btn {
   font-size: 1.5rem;
   cursor: pointer;
+}
+.removeBookMark-btn{
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: #00000044;
+
+
 }
 .cardImg-bottom-btns-wrapper {
   display: flex;
