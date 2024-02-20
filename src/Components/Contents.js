@@ -8,9 +8,8 @@ import { AppContext } from "./UseContex";
 export const Contents = () => {
   const [posts, setPosts] = useState([]);
   const context = useContext(AppContext)
-  console.log({context});
   const {dispatch, state} = context
-  const postEndPoint = "/api/posts";
+  const getpostEndPoint = "/api/posts";
   const headers = {
     headers: {
       authorization: localStorage.getItem("encodedToken")
@@ -18,10 +17,8 @@ export const Contents = () => {
     }
   }
   const getPostHandler = async () => {
-    
-    const response = await axios.get(postEndPoint, headers);
+    const response = await axios.get(getpostEndPoint, headers);
     if (response.status === 200 || response.status === 201) {
-
       return response.data
     }
   };
@@ -29,7 +26,7 @@ export const Contents = () => {
     (async()=>{
       const data = await getPostHandler()
       setPosts(data?.posts)
-      
+      dispatch({type: "GET_POSTS" , payload: data?.posts})
     })()
   }, [])
 
@@ -73,7 +70,7 @@ export const Contents = () => {
           />
         </div>
       </div>
-      {posts.map((userPost)=>{
+      {state?.posts.map((userPost)=>{
         return  <div key={userPost._id}  className="content-page-imageCard-wrapper">
           <ImageCard  userPost={userPost} setPosts={setPosts} getPostHandler={getPostHandler} />
         </div>
