@@ -52,7 +52,6 @@ export const ImageCard = ({ userPost , setPosts,getPostHandler }) => {
     const response = await axios.post(bookMarkEndPoint, requestBody, headers)
     if (response.status === 200 || response.status === 201) {
     setIsPostBookMark(true)
-    console.log(response);
 // const updatedPostData = await  getPostHandler()
 // setPosts(updatedPostData)
     }
@@ -64,7 +63,6 @@ export const ImageCard = ({ userPost , setPosts,getPostHandler }) => {
     const response = await axios.post(removeBookMarkEndPoint, requestBody, headers)
     if (response.status === 200 || response.status === 201) {
       setIsPostBookMark(false)
-      console.log("remove bookMark data", response);
       return response
     }
 

@@ -29,7 +29,6 @@ export const SignInPage = () => {
       username: username,
       password: password,
     };
-    console.log(requestBody, isLoginFieldEmpty);
     
     const response = await axios.post(logingAPI, requestBody);
     if (response.status === 201 || 200) navigate("/landing-page");

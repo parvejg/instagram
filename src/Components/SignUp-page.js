@@ -22,12 +22,10 @@ export const SignUpPage = () => {
       email: email,
       password: password,
     };
-    console.log(requestBody);
     const response = await axios.post(signUpEndPoint, requestBody);
     if (response.status === 201 || 200)
       localStorage.setItem("encodedToken", response.data.encodedToken);
     navigate("/landing-page");
-    console.log(response.data.encodedToken, "encodedToken");
     dispatch({ type: "encodedToken", payload: response.data.encodedToken })
   };
   return (

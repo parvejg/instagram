@@ -12,7 +12,6 @@ export const CreateNewPost = () => {
     }
 
   }
-  console.log(image);
   const postHandler = async () => {
     const headers = {
       headers: {
@@ -27,7 +26,6 @@ export const CreateNewPost = () => {
     const postEndPoint = "/api/posts"
     const response = await axios.post(postEndPoint, headers,requestBody)
     if (response.status === 200 || response.status === 201) {
-      console.log(response, "pppdsts");
       return response
     }
   }
