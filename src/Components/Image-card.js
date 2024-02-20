@@ -28,8 +28,8 @@ export const ImageCard = ({ userPost , setPosts,getPostHandler }) => {
     if (response.status === 201 || response.status === 200) {
       SetIsPostLiked(true)
       dispatch({ type: "LikeData", payload: response.data })
-      setPosts(response?.data.posts)
-      console.log("likedata", response);
+      dispatch({type: "GET_POSTS" , payload: response.data.posts})
+     
     }
   }
   const createdAtTime = new Date(createdAt)
@@ -42,8 +42,7 @@ export const ImageCard = ({ userPost , setPosts,getPostHandler }) => {
     if (response.status === 200 || response.status === 201) {
       SetIsPostLiked(false)
       dispatch({type: "DislikeData" , payload: response.data})
-      setPosts(response?.data.posts)
-      console.log("dislikeData", response.data);
+      dispatch({type: "GET_POSTS" , payload: response.data.posts})
     }
 
   }
@@ -53,7 +52,7 @@ export const ImageCard = ({ userPost , setPosts,getPostHandler }) => {
     const response = await axios.post(bookMarkEndPoint, requestBody, headers)
     if (response.status === 200 || response.status === 201) {
     setIsPostBookMark(true)
-    console.log("bookMarkData", response);
+    console.log(response);
 // const updatedPostData = await  getPostHandler()
 // setPosts(updatedPostData)
     }

@@ -3,15 +3,18 @@ import axios from "axios";
 import "./SignUp-page.css";
 import { BasicInput } from "./ReusableComponents/BasicInput";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AppContext } from "./UseContex";
 export const SignUpPage = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const isLoginFieldEmpty = !((firstName&&lastName),(email&&password))
+  const isLoginFieldEmpty = !((firstName && lastName), (email && password))
   const signUpEndPoint = "/api/auth/signup";
   const navigate = useNavigate();
+  const context = useContext(AppContext)
+  const { dispatch } = context
   const signUpHandler = async () => {
     const requestBody = {
       firstName: firstName,
@@ -24,7 +27,8 @@ export const SignUpPage = () => {
     if (response.status === 201 || 200)
       localStorage.setItem("encodedToken", response.data.encodedToken);
     navigate("/landing-page");
-    console.log(response);
+    console.log(response.data.encodedToken, "encodedToken");
+    dispatch({ type: "encodedToken", payload: response.data.encodedToken })
   };
   return (
     <div className="signUp-page-container">
@@ -83,7 +87,7 @@ export const SignUpPage = () => {
       </div>
       <div className="sign-in-link-wrapper">
         Have an account?
-        <Link to="/login-page"  className="sign-up-link">
+        <Link to="/login-page" className="sign-up-link">
           Log in
         </Link>
       </div>

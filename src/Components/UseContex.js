@@ -13,13 +13,25 @@ export const AppContext  = createContext();
                ...state,
                DislikeData: action.payload
             }
+            case "GET_POSTS":
+               return{
+                  ...state, 
+                  posts: action.payload
+               }
+               case "encodedToken":
+                  return{
+                     ...state, 
+                     encodedToken: action.payload
+                  }
       default: 
       return state;
    }
  }
  const initialState = {
     likeData: [],
-    DislikeData: []
+    DislikeData: [],
+    posts: [],
+    encodedToken: []
     
  }
 
